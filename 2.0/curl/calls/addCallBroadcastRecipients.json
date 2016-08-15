@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "id": 13410,
+      "fromNumber": "12135551189",
+      "toNumber": "12135551100",
+      "state": "READY",
+      "campaignId": 14,
+      "batchId": 12,
+      "contact": {
+        "id": 4096,
+        "homePhone": "12135551100"
+      },
+      "inbound": false,
+      "created": 1443383295000,
+      "modified": 1443383295000,
+      "agentCall": false
+    },
+    {
+      "id": 13411,
+      "fromNumber": "12135551189",
+      "toNumber": "12135551101",
+      "state": "READY",
+      "campaignId": 14,
+      "batchId": 12,
+      "contact": {
+        "id": 4097,
+        "homePhone": "12135551101"
+      },
+      "inbound": false,
+      "created": 1443383295000,
+      "modified": 1443383295000,
+      "agentCall": false
+    }
+  ]
+}

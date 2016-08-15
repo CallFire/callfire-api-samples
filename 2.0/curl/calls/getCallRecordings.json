@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "id": 2033,
+      "callId": 101,
+      "campaignId": 15,
+      "name": "hello",
+      "created": 1443382635000,
+      "lengthInBytes": 12345,
+      "lengthInSeconds": 9,
+      "hash": "",
+      "mp3Url": "https://api.callfire.com/calls/recordings/2033",
+      "state": "READY"
+    }
+  ]
+}

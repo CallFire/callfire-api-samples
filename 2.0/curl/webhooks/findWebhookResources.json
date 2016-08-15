@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "resource": "TextBroadcast",
+      "events": [
+        "stop",
+        "start"
+      ]
+    },
+    {
+      "resource": "CallBroadcast",
+      "events": [
+        "stop",
+        "start"
+      ]
+    }
+  ],
+  "limit": 1000,
+  "offset": 0,
+  "totalCount": 2
+}

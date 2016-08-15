@@ -1,0 +1,25 @@
+{
+  "id": 11,
+  "name": "Example API Call Broadcast",
+  "status": "STOPPED",
+  "lastModified": 1455240858000,
+  "fromNumber": "12135551189",
+  "localTimeRestriction": {
+    "enabled": false
+  },
+  "retryConfig": {
+    "maxAttempts": 1,
+    "minutesBetweenAttempts": 60,
+    "retryPhoneTypes": [
+      "FIRST_NUMBER"
+    ]
+  },
+  "resumeNextDay": true,
+  "sounds": {
+    "liveSoundText": "Hello! This is a live answer text to speech recording",
+    "liveSoundId": 75,
+    "machineSoundText": "This is an answering machine text to speech recording",
+    "machineSoundId": 76
+  },
+  "answeringMachineConfig": "AM_AND_LIVE"
+}
