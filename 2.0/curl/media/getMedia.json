@@ -1,0 +1,9 @@
+{
+  "id": 1234,
+  "accountId": 54321,
+  "name": "hello",
+  "created": 1443382635000,
+  "lengthInBytes": 123456,
+  "mediaType": "MP3",
+  "publicUrl": "https://www.callfire.com/v2/media/public/ahashkey123.mp3"
+}
