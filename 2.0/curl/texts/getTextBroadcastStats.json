@@ -1,0 +1,11 @@
+{
+  "totalOutboundCount": 2,
+  "remainingOutboundCount": 0,
+  "billedAmount": 0.50,
+  "sentCount": 2,
+  "unsentCount": 0,
+  "recievedCount": 1,
+  "doNotTextCount": 1,
+  "tooBigCount": 0,
+  "errorCount": 0
+}
