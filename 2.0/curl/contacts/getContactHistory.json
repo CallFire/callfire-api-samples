@@ -1,0 +1,80 @@
+{
+  "id": 3089,
+  "calls": [
+    {
+      "id": 12385,
+      "fromNumber": "12135551189",
+      "toNumber": "18089552643",
+      "state": "READY",
+      "campaignId": 8,
+      "batchId": 5,
+      "contact": {
+        "id": 3089,
+        "firstName": "Janet",
+        "lastName": "Robertson",
+        "workPhone": "18089552643"
+      },
+      "inbound": false,
+      "created": 1443332871000,
+      "modified": 1443332871000,
+      "agentCall": false
+    },
+    {
+      "id": 3089,
+      "fromNumber": "12135551189",
+      "toNumber": "18089552643",
+      "state": "FINISHED",
+      "campaignId": 1,
+      "batchId": 1,
+      "contact": {
+        "id": 3089,
+        "firstName": "Janet",
+        "lastName": "Robertson",
+        "workPhone": "18089552643"
+      },
+      "inbound": false,
+      "created": 1443332868000,
+      "modified": 1443239245000,
+      "finalCallResult": "NO_ANS",
+      "records": [
+        {
+          "id": 3089,
+          "billedAmount": 0.0,
+          "finishTime": 1443239245000,
+          "callResult": "NO_ANS"
+        }
+      ],
+      "agentCall": false
+    }
+  ],
+  "texts": [
+    {
+      "id": 6209,
+      "fromNumber": "12135551189",
+      "toNumber": "18089552643",
+      "state": "FINISHED",
+      "campaignId": 3,
+      "batchId": 2,
+      "contact": {
+        "id": 3089,
+        "firstName": "Janet",
+        "lastName": "Robertson",
+        "workPhone": "18089552643"
+      },
+      "inbound": false,
+      "created": 1443239245000,
+      "modified": 1443239245000,
+      "message": "Outbound test text message",
+      "finalTextResult": "SENT",
+      "records": [
+        {
+          "id": 7215,
+          "billedAmount": 0.03,
+          "finishTime": 1443239245000,
+          "message": "CallFire Rocks!",
+          "textResult": "SENT"
+        }
+      ]
+    }
+  ]
+}

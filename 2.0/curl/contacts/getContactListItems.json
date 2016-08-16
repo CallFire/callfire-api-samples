@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "id": 4104,
+      "firstName": "Carl",
+      "lastName": "Friar",
+      "homePhone": "12135551125"
+    },
+    {
+      "id": 4105,
+      "firstName": "Contact",
+      "lastName": "One",
+      "homePhone": "12135551126"
+    },
+    {
+      "id": 4106,
+      "firstName": "Contact",
+      "lastName": "Two",
+      "homePhone": "12135551127"
+    }
+  ],
+  "totalCount": 3
+}

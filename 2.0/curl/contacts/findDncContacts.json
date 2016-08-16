@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "number": "12135551129",
+      "call": true,
+      "text": true,
+      "listId": 2
+    },
+    {
+      "number": "12135551130",
+      "call": false,
+      "text": true,
+      "listId": 2
+    },
+    {
+      "number": "12135551131",
+      "call": true,
+      "text": true,
+      "listId": 2
+    }
+  ],
+  "totalCount": 3
+}
