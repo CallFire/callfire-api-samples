@@ -4,6 +4,6 @@ curl -u username:password -H "Content-Type:application/json" -X POST "https://ap
     {
         "name":"API hook",
         "resource":"textCampaign",
-        "events":["start", "stop"], 
-        "callback":"http://cool.site.xyz/webhook"
+        "events":["started", "stopped"], 
+        "callback":"http://callback-service.com/webhook"
     }'

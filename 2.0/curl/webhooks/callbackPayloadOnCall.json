@@ -1,0 +1,51 @@
+{  
+   "timestamp":1469540830377,
+   "webhookId":3749003,
+   "webhookName":"Test Webhook",
+   "resourceType":"OutboundCall",
+   "events":[  
+      {  
+         "timestamp":1469540830377,
+         "webhookId":3749003,
+         "resourceType":"OutboundCall",
+         "eventType":"Finished",
+         "resource":{  
+            "id":1024990109003,
+            "fromNumber":"12132212384",
+            "toNumber":"12132041238",
+            "state":"FINISHED",
+            "campaignId":13194908003,
+            "batchId":11305143003,
+            "contact":{  
+               "id":537189974003,
+               "firstName":"testFirstName",
+               "lastName":"testLastName",
+               "zipcode":"90025",
+               "homePhone":"12132041238",
+               "workPhone":"12132041238"
+            },
+            "inbound":false,
+            "created":1469565220000,
+            "modified":1469565232000,
+            "labels":[  
+               "Test Label 1",
+               "Test Label 2"
+            ],
+            "finalCallResult":"AM",
+            "records":[  
+               {  
+                  "id":571797202003,
+                  "billedAmount":1,
+                  "finishTime":1469565233000,
+                  "result":"AM",
+                  "originateTime":1469565225000,
+                  "answerTime":1469565227000,
+                  "duration":6
+               }
+            ],
+            "agentCall":false
+         }
+      }
+   ]
+}
+

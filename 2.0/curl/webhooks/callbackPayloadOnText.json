@@ -1,0 +1,49 @@
+{  
+   "timestamp":1469540830377,
+   "webhookId":3749003,
+   "webhookName":"Test Webhook",
+   "resourceType":"OutboundText",
+   "events":[  
+      {  
+         "timestamp":1469540830377,
+         "webhookId":3749003,
+         "resourceType":"OutboundText",
+         "eventType":"Finished",
+         "resource":{  
+            "id":1023905054003,
+            "fromNumber":"12132041238",
+            "toNumber":"14246525473",
+            "state":"FINISHED",
+            "campaignId":9362663003,
+            "contact":{  
+               "id":537189974003,
+               "firstName":"testFirstName",
+               "lastName":"testLastName",
+               "zipcode":"90025",
+               "homePhone":"12132041238",
+               "workPhone":"12132041238"
+            },
+            "inbound":true,
+            "created":1469540830000,
+            "modified":1469540828000,
+            "labels":[  
+               "Test"
+            ],
+            "message":"Test Message",
+            "finalTextResult":"RECEIVED",
+            "records":[  
+               {  
+                  "id":570794145003,
+                  "billedAmount":1.0,
+                  "finishTime":1469540830000,
+                  "message":"Test Message",
+                  "textResult":"RECEIVED"
+               }
+            ],
+            "media":[  
+            ]
+         }
+      }
+   ]
+}
+

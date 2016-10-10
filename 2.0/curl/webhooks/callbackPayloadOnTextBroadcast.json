@@ -1,0 +1,77 @@
+{  
+   "timestamp":1469538745454,
+   "webhookId":3747003,
+   "webhookName":"Test Webhook",
+   "resourceType":"TextBroadcast",
+   "events":[  
+      {  
+         "timestamp":1469538745454,
+         "webhookId":3747003,
+         "resourceType":"TextBroadcast",
+         "eventType":"Finished",
+         "resource":{  
+            "id":13163667003,
+            "name":"TEST Text Broadcast",
+            "status":"STOPPED",
+            "lastModified":1469538744000,
+            "fromNumber":"12132041238",
+            "localTimeRestriction":{  
+               "enabled":true,
+               "beginHour":8,
+               "beginMinute":0,
+               "endHour":21,
+               "endMinute":0
+            },
+            "schedules":[  
+               {  
+                  "id":1617524003,
+                  "startDate":{  
+                     "year":2016,
+                     "month":7,
+                     "day":28
+                  },
+                  "startTimeOfDay":{  
+                     "hour":9,
+                     "minute":0,
+                     "second":0
+                  },
+                  "stopTimeOfDay":{  
+                     "hour":17,
+                     "minute":0,
+                     "second":0
+                  },
+                  "timeZone":"America/Los_Angeles",
+                  "daysOfWeek":[  
+                     "MONDAY"
+                  ]
+               }
+            ],
+            "retryConfig":{  
+               "maxAttempts":1,
+               "minutesBetweenAttempts":60,
+               "retryResults":[  
+
+               ],
+               "retryPhoneTypes":[  
+                  "FIRST_NUMBER"
+               ]
+            },
+            "maxActive":100,
+            "labels":[  
+               "Label1"
+            ],
+            "resumeNextDay":false,
+            "recipients":[  
+               {  
+                  "message":"Test Message",
+                  "contactId":1232412334
+               }
+            ],
+            "message":"Test Message",
+            "bigMessageStrategy":"SEND_MULTIPLE",
+            "media":[  
+            ]
+         }
+      }
+   ]
+}
