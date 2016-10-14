@@ -1,13 +1,34 @@
 {
   "items": [
-    {
-      "id": 4103,
-      "firstName": "Test",
-      "lastName": "Contact",
-      "homePhone": "12135551124"
+  {
+     "id":88970899000
+     "firstName":"Alice",
+     "lastName":"Moore",
+     "homePhone":"12135551124",
+     "mobilePhone":"12136666123",
+     "workPhone":"14553327789",
+     "zipcode":"40460",
+     "properties": 
+     {
+       "custom_age":30,
+       "custom_position":"Manager"
+     }
+   },
+   {
+     "id":88971899000
+     "firstName":"Bob",
+     "lastName":"Smith",
+     "homePhone":"17885551111",
+     "mobilePhone":"17886666122",
+     "workPhone":"17883327700",
+     "zipcode":"25600",
+     "properties":
+      {
+        "custom_ext_system_id":100200301
+      }
     }
   ],
-  "limit": 1,
+  "limit": 10,
   "offset": 0,
-  "totalCount": 1
+  "totalCount": 2
 }

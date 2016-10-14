@@ -11,7 +11,7 @@
         "id": 4101,
         "homePhone": "12135551123"
       },
-      "inbound": false,
+      "inbound": true,
       "created": 1443382358000,
       "modified": 1443382358000,
       "message": "a new test message"
@@ -27,7 +27,7 @@
         "id": 4099,
         "homePhone": "12135551122"
       },
-      "inbound": false,
+      "inbound": true,
       "created": 1443382248000,
       "modified": 1443382248000,
       "message": "a new test message"

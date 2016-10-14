@@ -1,4 +1,4 @@
-firstName,lastName,homePhone,workPhone,custom_age,custom_role, custom_label
+firstName,lastName,homePhone,workPhone,custom_age,custom_role,custom_label
 Alice,Moore,12345678901,12345678900,30,,team1
 Bob,Schmidt,12345678999,12345678888,40,Manager,team1
 Jason,Po,12225678999,12345671100,25,,

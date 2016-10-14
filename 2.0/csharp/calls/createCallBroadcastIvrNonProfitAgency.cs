@@ -15,24 +15,6 @@ public class ApiClientSample
             FromNumber = "12135551189",
             // attach custom labels if needed
             Labels = new List<string> {"charity", "id-10002"},
-            // set answering machine detection
-            AnsweringMachineConfig = AnsweringMachineConfig.AM_AND_LIVE,
-            // set voice messages using TTS option for Live answers and when Answering Machine is detected.
-            // you also can set a pre-defined TTS voice.
-            Sounds = new CallBroadcastSounds
-            {
-                LiveSoundText = "Hello, this is Mary, from the local branch of Non-profit agency. " +
-                                "Do not miss our charity weekend taking place at first November weekends." +
-                                " We are looking forward to meet you there. Press '1' to to find out more details.",
-                LiveSoundTextVoice = Voice.MALE1,
-                MachineSoundText = "Hello, this is Mary, from the local branch of Non-profit agency. " +
-                                   "If you are interested in charity weekend, please call (231) 455-7676.",
-                MachineSoundTextVoice = Voice.MALE1,
-                TransferSoundText = "Please wait a moment, call is being transfer.",
-                // set number to transfer call to once transfer digit is pressed
-                TransferDigit = "1",
-                TransferNumber = "12314557676"
-            },
             // allow CallFire to dial recipient only between 09:00 - 18:00 depending on
             //  recipient's number area code timezone
             LocalTimeRestriction = new LocalTimeRestriction
@@ -68,6 +50,67 @@ public class ApiClientSample
                     RetryPhoneTypes.WORK_PHONE
                 }
             },
+            // set IVR XML
+            DialplanXml = @"
+                <dialplan name=""Root"">
+                    <!-- answering machine detection -->
+                    <amd>
+                        <!-- if call is answered by human go to live menu -->
+                        <live>
+                            <goto name=""goto_Live"">Live</goto>
+                        </live>
+                        <machine>
+                            <goto name=""goto_Machine"">Machine</goto>
+                        </machine>
+                    </amd>
+                    <menu maxDigits=""1"" timeout=""3500"" name=""Live"">
+                        <play type=""tts"" voice=""female1"" name=""play_Live"">
+                            Hello ${contact.firstName}, we are organizing a charity weekend in November.
+                            Don't miss to visit it. Press ""1"" to follow the instructions how to order the 
+                            tickets, press ""2"" if you are willing to become a volunteer at event.
+                        </play>
+                        <keypress pressed=""1"" name=""kp_order_tickets"">
+                             <!-- store recipient's answer and go to another menu to make a purchase -->
+                            <stash varname=""order"" name=""create_an_order"">Yes</stash>
+                            <goto>order_tickets</goto>
+                        </keypress>
+                        <keypress pressed=""2"" name=""kp_become_volonteer"">
+                            <!-- store recipient's answer -->
+                            <stash varname=""volonteer"" name=""become_volonteer"">Yes</stash>
+                            <play type=""tts"" voice=""female1"" name=""play_Goodbye_1"">
+                                Thanks for the response. We will call you later today.
+                            </play>
+                            <goto>Hangup</goto>
+                        </keypress>
+                         <!-- if pressed key is not specified in menu replay Live menu -->
+                        <keypress pressed=""default"" name=""incorrect_Selection"">
+                            <play type=""tts"" voice=""female1"" name=""play_Inorrect_Selection"">
+                                That is not a valid selection. Please try again.
+                            </play>
+                            <goto name=""replay_Live"">Live</goto>
+                        </keypress>
+                    </menu>
+                    <menu maxDigits=""1"" timeout=""3500"" name=""order_tickets"">
+                        <play type=""tts"" voice=""female1"" name=""play_order_tickets"">
+                            You will be transferred to Sales representative in a moment. Please wait.
+                        </play>
+                        <transfer callerid=""${call.callerid}"" musiconhold=""blues"" mode=""ringall"">
+                            15551234567
+                        </transfer>
+                    </menu>
+                    <play type=""tts"" voice=""female1"" name=""Goodbye"">
+                        Thank you for taking our survey
+                    </play>
+                    <goto name=""Goodbye_Hangup"">Hangup</goto>
+                    <play type=""tts"" voice=""female1"" name=""Machine"">
+                        Hello ${contact.firstName} ${contact.lastName}. 
+                        We are organizing a charity weekend in November.
+                        If you would like to participate, please call 8 5 5, 5 5 5, 5 5 5 5. 
+                        Thank you.
+                    </play>
+                    <hangup name=""Hangup""/>
+                </dialplan>
+            ",
             // add new recipients
             Recipients = new List<Recipient>
             {

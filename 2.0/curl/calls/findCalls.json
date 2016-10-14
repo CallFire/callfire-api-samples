@@ -14,13 +14,24 @@
       "inbound": false,
       "created": 1443373386000,
       "modified": 1443373412000,
-      "finalCallResult": "AM",
+      "finalCallResult": "LA",
       "records": [
         {
           "id": 10306,
           "billedAmount": 1.1667,
           "finishTime": 1443373425000,
-          "callResult": "AM"
+          "callResult": "LA",
+            "questionResponses":[  
+             {  
+               "question":"Do you have a dog",
+               "response":"Yes"
+             },
+             {  
+                "question":"What's your favorite movie",
+                "response":"StarWars"
+             }
+            ]
+          }
         }
       ],
       "agentCall": false

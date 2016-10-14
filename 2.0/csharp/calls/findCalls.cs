@@ -19,5 +19,6 @@ public class ApiClientSample
             Limit = 3
         };
         Page<Call> calls = client.CallsApi.Find(request);
+        // check Call.records.questionResponses for stored data
     }
 }
