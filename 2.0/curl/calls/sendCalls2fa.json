@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "id": 13394,
+      "fromNumber": "12135551189",
+      "toNumber": "12135551100",
+      "state": "READY",
+      "campaignId": 10,
+      "batchId": 6,
+      "contact": {
+        "id": 4096,
+        "homePhone": "12135551100"
+      },
+      "attributes": {
+        "external_user_id":"45450007002"
+      },
+      "inbound": false,
+      "created": 1443373382000,
+      "modified": 1443373382000,
+      "agentCall": false
+    }
+  ]
+}

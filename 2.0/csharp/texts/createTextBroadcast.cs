@@ -58,7 +58,7 @@ public class ApiClientSample
                 {
                     PhoneNumber = "12135551101",
                     // you can override a message set in broadcast for a particular recipient
-                    Message = "Hi {u_name}, the megic number is ${magic_number}",
+                    Message = "Hi ${u_name}, the megic number is ${magic_number}",
                     Attributes = new Dictionary<string, string>
                     {
                         {"u_name", "Jane"},

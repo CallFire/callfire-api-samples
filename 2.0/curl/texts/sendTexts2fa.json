@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "id": 13413,
+      "fromNumber": "67076",
+      "toNumber": "12135551100",
+      "state": "READY",
+      "campaignId": 20,
+      "batchId": 14,
+      "contact": {
+        "id": 4096,
+        "homePhone": "12135551100"
+      },
+      "attributes": {
+        "external_user_id":"45450007002"
+      },
+      "inbound": false,
+      "created": 1443403042000,
+      "modified": 1443403042000,
+      "message": "Your one-time code is 2517"
+    }
+  ]
+}

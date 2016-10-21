@@ -23,7 +23,7 @@
                "homePhone":"12132041238",
                "workPhone":"12132041238"
             },
-            "inbound":true,
+            "inbound":false,
             "created":1469540830000,
             "modified":1469540828000,
             "labels":[  
