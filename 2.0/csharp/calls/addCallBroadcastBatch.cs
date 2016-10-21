@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections.Generic;
 using CallfireApiClient;
 using CallfireApiClient.Api.Campaigns.Model;
 using CallfireApiClient.Api.Campaigns.Model.Request;
@@ -11,7 +12,7 @@ public class ApiClientSample
         var request = new AddBatchRequest
         {
             CampaignId = 1234,
-            Name = "new_batch",
+            Name = "Contact Batch 1",
             Recipients = new List<Recipient>
             {
                 new Recipient {PhoneNumber = "12131234567"},
