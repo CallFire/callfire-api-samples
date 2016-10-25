@@ -2,7 +2,11 @@
   "items": [
     {
       "shortCode": "67076",
-      "keyword": "TEST"
+      "keyword": "SUN"
+    },
+    {
+      "shortCode": "67076",
+      "keyword": "MOON"
     }
   ]
 }

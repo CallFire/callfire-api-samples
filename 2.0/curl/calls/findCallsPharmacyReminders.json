@@ -12,11 +12,10 @@
         "homePhone": "12135551101"
       },
       "labels": [
-        "survey 1"
+        "reminders"
       ],
       "attributes": {
-          "external_user_id":"45450007002",
-          "external_route_id":"77770007002"
+          "external_user_id":"45450007002"
       },
       "inbound": false,
       "created": 1443373386000,
@@ -28,15 +27,12 @@
           "billedAmount": 1.1667,
           "finishTime": 1443373425000,
           "callResult": "LA",
-          "questionResponses":[  
-           {  
-             "question":"Do you have a dog",
-             "response":"Yes"
-           },
-           {  
-              "question":"What's your favorite movie",
-              "response":"StarWars"
-           }
+          "questionResponses":
+          [  
+            {  
+             "question":"selected_menu",
+             "response":"confirmed"
+            }
           ]
         }
       ],
@@ -53,22 +49,35 @@
         "id": 4096,
         "homePhone": "12135551100"
       },
+      "labels": [
+        "reminders"
+      ],
+      "attributes": {
+          "external_user_id":"45450008008"
+      },
       "inbound": false,
       "created": 1443373382000,
       "modified": 1443373412000,
-      "finalCallResult": "CARRIER_ERROR",
+      "finalCallResult": "LA",
       "records": [
         {
           "id": 10305,
           "billedAmount": 0,
           "finishTime": 1443373408000,
-          "callResult": "CARRIER_ERROR"
+          "callResult": "LA",
+          "questionResponses":
+          [  
+            {  
+             "question":"selected_menu",
+             "response":"reschedule"
+            }
+          ]
         }
       ],
       "agentCall": false
     }
   ],
-  "limit": 2,
+  "limit": 10,
   "offset": 0,
   "totalCount": 7160
 }

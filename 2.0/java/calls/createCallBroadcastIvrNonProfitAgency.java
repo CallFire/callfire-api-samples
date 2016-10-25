@@ -1,5 +1,3 @@
-package com.callfire.api.client.integration;
-
 import com.callfire.api.client.CallfireClient;
 import com.callfire.api.client.api.campaigns.model.CallBroadcast;
 import com.callfire.api.client.api.campaigns.model.DayOfWeek;

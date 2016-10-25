@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "id": 13413,
+      "fromNumber": "67076",
+      "toNumber": "12135551123",
+      "state": "READY",
+      "campaignId": 20,
+      "batchId": 14,
+      "contact": {
+        "id": 4096,
+        "homePhone": "12135551123"
+      },
+      "labels": [
+        "reminders"
+      ],
+      "attributes": {
+        "contact_name":"Alice",
+        "external_user_id":"45450007002"
+      },
+      "inbound": false,
+      "created": 1443403042000,
+      "modified": 1443403042000,
+      "message": "Hello Alice, you have an appointment with Dr. Andrew tomorrow at 3:00 PM, if you need to reschedule please call (855)-555-4477"
+    }
+  ]
+}

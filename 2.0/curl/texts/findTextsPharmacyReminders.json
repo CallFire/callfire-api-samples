@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "id": 13405,
+      "fromNumber": "12135551100",
+      "toNumber": "12135551123",
+      "state": "FINISHED",
+      "campaignId": 13,
+      "batchId": 11,
+      "contact": {
+        "id": 4101,
+        "homePhone": "12135551123"
+      },
+      "labels": [
+        "reminders"
+      ],
+      "attributes": {
+          "contact_name":"Alice",
+          "external_user_id":"45450007002"
+      },
+      "inbound": true,
+      "created": 1443382358000,
+      "modified": 1443382358000,
+      "message": "Hello Alice, you have an appointment with Dr. Andrew tomorrow at 3:00 PM, if you need to reschedule please call (855)-555-4477",
+      "finalTextResult": "SENT",
+      "records": [
+        {
+          "id": 10310,
+          "billedAmount": 0.0,
+          "finishTime": 1443403043000,
+          "message": "Hello Alice, you have an appointment with Dr. Andrew tomorrow at 3:00 PM, if you need to reschedule please call (855)-555-4477",
+          "textResult": "SENT"
+        }
+      ]
+    },
+    {
+      "id": 13404,
+      "fromNumber": "12135551100",
+      "toNumber": "12135551122",
+      "state": "FINISHED",
+      "campaignId": 13,
+      "batchId": 10,
+      "contact": {
+        "id": 4099,
+        "homePhone": "12135551122"
+      },
+      "labels": [
+        "reminders"
+      ],
+      "attributes": {
+          "contact_name":"Bob",
+          "external_user_id":"77880007002"
+      },
+      "inbound": true,
+      "created": 1443382248000,
+      "modified": 1443382248000,
+      "message": "Hello Bob, you have an appointment with Dr. Jonson tomorrow at 9:30 AM, if you need to reschedule please call (855)-555-4477",
+      "finalTextResult": "SENT",
+      "records": [
+        {
+          "id": 10410,
+          "billedAmount": 0.0,
+          "finishTime": 1443403053000,
+          "message": "Hello Bob, you have an appointment with Dr. Jonson tomorrow at 9:30 PM, if you need to reschedule please call (855)-555-4477",
+          "textResult": "SENT"
+        }
+      ]
+    }
+  ],
+  "limit": 10,
+  "offset": 0,
+  "totalCount": 100
+}

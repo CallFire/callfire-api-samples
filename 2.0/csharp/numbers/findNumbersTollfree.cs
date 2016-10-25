@@ -8,7 +8,7 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        var request = new CommonFindRequest {Limit = 2, Offset = 1};
+        var request = new CommonFindRequest {Limit = 2, Offset = 0};
         IList<Number> numbers = client.NumbersApi.FindNumbersTollfree(request);
     }
 }

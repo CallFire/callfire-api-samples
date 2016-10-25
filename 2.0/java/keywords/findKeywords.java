@@ -7,6 +7,6 @@ import java.util.List;
 class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
-        List<Keyword> keywords = client.keywordsApi().find(Arrays.asList("KEYWORD1", "KEYWORD2"));
+        List<Keyword> keywords = client.keywordsApi().find(Arrays.asList("SUN", "MOON"));
     }
 }

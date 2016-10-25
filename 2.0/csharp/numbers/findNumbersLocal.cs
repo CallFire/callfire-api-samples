@@ -8,7 +8,7 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        var request = new FindNumbersLocalRequest {Limit = 2, State = "LA"};
+        var request = new FindNumbersLocalRequest {Limit = 2, Zipcode = "90401"};
         IList<Number> numbers = client.NumbersApi.FindNumbersLocal(request);
     }
 }

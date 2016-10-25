@@ -9,7 +9,10 @@ public class ApiClientSample
     {
         var client = new CallfireClient("api_login", "api_password");
         // request for buying particular numbers
-        var request1 = new NumberPurchaseRequest {Numbers = new List<string> {"12132212289"}};
+        var request1 = new NumberPurchaseRequest
+        {
+            Numbers = new List<string> {"12131234567", "12131234568"}
+        };
         ResourceId resourceId1 = client.OrdersApi.OrderNumbers(request1);
 
         // request for buying numbers in specific area

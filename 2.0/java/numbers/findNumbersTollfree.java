@@ -8,8 +8,8 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
         CommonFindRequest request = CommonFindRequest.create()
-            .limit(1L)
-            .offset(1L)
+            .limit(2L)
+            .offset(0L)
             .build();
         List<Number> numbers = client.numbersApi().findNumbersTollfree(request);
     }

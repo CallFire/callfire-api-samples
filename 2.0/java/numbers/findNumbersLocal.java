@@ -7,9 +7,10 @@ import java.util.List;
 class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
-        //At least one parameter is required
+        // find 2 available local numbers by zipcode
         FindNumbersLocalRequest request = FindNumbersLocalRequest.create()
-            .state("LA")
+            .zipcode("90401")
+            .limit(2L)
             .build();
         List<Number> numbers = client.numbersApi().findNumbersLocal(request);
     }
