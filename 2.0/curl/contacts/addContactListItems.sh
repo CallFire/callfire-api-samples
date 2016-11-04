@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# Add contacts by providing a list of Contact objects
 curl -u username:password -H "Content-Type:application/json" -X POST -d '
     {
         "contacts":
@@ -22,8 +21,6 @@ curl -u username:password -H "Content-Type:application/json" -X POST -d '
         ]
     }' "https://api.callfire.com/v2/contacts/lists/3/items"
 
-
-# Add an existing contacts to a list
 curl -u username:password -H "Content-Type:application/json" -X POST -d '
     {
         "contactIds":
@@ -35,7 +32,6 @@ curl -u username:password -H "Content-Type:application/json" -X POST -d '
         ]
     }' "https://api.callfire.com/v2/contacts/lists/3/items"
 
-# Add contacts from a list of string numbers in E.164 format, also map phone numbers to workPhone field.
 curl -u username:password -H "Content-Type:application/json" -X POST -d '
     {
         "contactNumbers":
