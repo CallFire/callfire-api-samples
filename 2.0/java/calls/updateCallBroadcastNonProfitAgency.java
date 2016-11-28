@@ -19,7 +19,7 @@ class ApiClientSample {
         CallBroadcast broadcast = new CallBroadcast();
         // set id of an existing broadcast, you can use find() method to search
         //  for particular broadcast id
-        broadcast.setId(100400003L);
+        broadcast.setId(10030003L);
         // schedule a campaign to run on Saturday and Sunday between 2016-12-01 10:00:00
         //  and 2016-12-10 18:00:00
         Schedule schedule1 = new Schedule();

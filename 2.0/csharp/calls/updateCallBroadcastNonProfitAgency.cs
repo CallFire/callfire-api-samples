@@ -9,6 +9,7 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var broadcast = new CallBroadcast
         {
+            Id = 10030003,
             Schedules = new List<Schedule>
             {
                 // schedule a campaign to run on Saturday and Sunday between 2016-12-01 10:00:00
