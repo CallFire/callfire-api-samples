@@ -4,17 +4,15 @@ const CallfireClient = require('callfire-api-client-js');
 const client = new CallfireClient('api-login', 'api-password');
 
 client.ready(() => {
-    client.webhooks.findWebhooks({
-      // filter by webhook name
-      name: 'my webhook',
-      // filter by resource
-      resource: 'TextBroadcast',
-      // filter by event
-      event: 'Started',
-      // filter by callback URI
-      callback: 'https://myservice/callback',
-      // filter by enabled flag
-      enabled: true,
+    client.campaigns.findCampaignSounds({
+      // filter by sound name
+      filter: 'name',
+      // includes ARCHIVED sounds
+      includeArchived: true,
+      // includes UPLOAD/RECORDING
+      includePending: true,
+      // includes SCRUBBED sounds
+      includeScrubbed: true,
       // search offset
       offset: 0,
       // return 10 items per request
