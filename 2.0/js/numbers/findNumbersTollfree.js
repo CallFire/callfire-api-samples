@@ -16,7 +16,7 @@ client.ready(() => {
       .then((response) => {
         console.log(response.obj);
       })
-      .catch(function (err) {
+      .catch((err) => {
         console.log('request error ' + err.data);
       });
   },

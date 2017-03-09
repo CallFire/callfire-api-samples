@@ -13,7 +13,7 @@ client.ready(() => {
       .then((response) => {
         console.log(response.data);
       })
-      .catch(function (err) {
+      .catch((err) => {
         console.log('request error ' + err.data);
       });
   },
