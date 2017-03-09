@@ -8,7 +8,6 @@ curl -u "username:password" -H "Content-Type:application/json" -X PUT -d '
             "screen":"false",
             "recorded":"true",
             "voicemail":"true",
-            "recorded":"true",
             "introSoundId":10004001,
             "whisperSoundId":10005002,
             "voicemailSoundId":10006003,
