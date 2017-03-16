@@ -9,7 +9,8 @@ client.ready(() => {
       extension: 'mp3'
     })
       .then((response) => {
-        console.log(response.obj);
+        // returns binary response
+        console.log(response.data);
       })
       .catch((err) => {
         console.log('request error ' + err.data);
