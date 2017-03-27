@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "id": 13410,
+      "created": 1443403042000,
+      "message": "Hi support"
+    },
+    {
+      "id": 13413,
+      "created": 1443403043000,
+      "message": "have an issue with API integration"
+    },
+/* skipped */
+    {
+      "id": 13463,
+      "created": 1443403044000,
+      "message": "..."
+    }
+  ],
+  "limit": 50,
+  "offset": 100,
+  "totalCount": 213
+}
