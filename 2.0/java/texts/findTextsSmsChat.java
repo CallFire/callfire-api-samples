@@ -1,10 +1,10 @@
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 import com.callfire.api.client.CallfireClient;
 import com.callfire.api.client.api.callstexts.model.Text;
 import com.callfire.api.client.api.callstexts.model.request.FindTextsRequest;
 import com.callfire.api.client.api.common.model.Page;
-
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 class ApiClientSample {
     public static void main(String[] args) {

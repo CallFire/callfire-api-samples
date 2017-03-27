@@ -1,9 +1,9 @@
+import java.util.Arrays;
+import java.util.List;
+
 import com.callfire.api.client.CallfireClient;
 import com.callfire.api.client.api.callstexts.model.Text;
 import com.callfire.api.client.api.campaigns.model.TextRecipient;
-
-import java.util.Arrays;
-import java.util.List;
 
 class ApiClientSample {
     public static void main(String[] args) {
