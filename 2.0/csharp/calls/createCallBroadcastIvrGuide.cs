@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using CallfireApiClient;
 using CallfireApiClient.Api.Campaigns.Model;
-using DayOfWeek = CallfireApiClient.Api.Campaigns.Model.DayOfWeek;
+using CallfireApiClient.Api.Common.Model;
 
 public class ApiClientSample
 {
