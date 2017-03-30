@@ -6,4 +6,6 @@ response = client.media.getMediaDataByKey(
     extension='mp3'
 ).result()
 
+# see sample JSON response for this API
+# on 'curl' samples tab
 print(response)

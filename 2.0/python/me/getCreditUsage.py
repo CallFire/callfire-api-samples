@@ -7,4 +7,6 @@ response = client.me.getCreditUsage(
     intervalEnd=2145945600000
 ).result()
 
+# see sample JSON response for this API
+# on 'curl' samples tab
 print(response)

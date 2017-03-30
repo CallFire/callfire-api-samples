@@ -10,4 +10,6 @@ response = client.keywords.findKeywordLeases(
     fields='items(keyword,leaseBegin,leaseEnd)'
 ).result()
 
+# see sample JSON response for this API
+# on 'curl' samples tab
 print(response)

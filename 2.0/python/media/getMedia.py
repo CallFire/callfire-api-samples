@@ -7,4 +7,6 @@ response = client.media.getMedia(
     fields='name,publicUrl'
 ).result()
 
+# see sample JSON response for this API
+# on 'curl' samples tab
 print(response)

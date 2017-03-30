@@ -7,4 +7,6 @@ response = client.webhooks.getWebhook(
     fields='name,callback'
 ).result()
 
+# see sample JSON response for this API
+# on 'curl' samples tab
 print(response)
