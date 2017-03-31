@@ -1,0 +1,14 @@
+from callfire.client import CallfireClient
+
+client = CallfireClient('api-login', 'api-password')
+response = client.texts.getTextBroadcastBatches(
+    id=11646003,
+    # search offset
+    offset=0,
+    # return 10 items per request
+    limit=10,
+    # return only specific fields
+    fields='items(name,status,size,remaining)'
+).result()
+
+print(response)
