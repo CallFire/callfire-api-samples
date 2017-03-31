@@ -12,4 +12,6 @@ response = client.texts.findTextAutoReplys(
     fields='items(id,match,keyword,message)'
 ).result()
 
+# see sample JSON response for this API
+# on 'curl' samples tab
 print(response)

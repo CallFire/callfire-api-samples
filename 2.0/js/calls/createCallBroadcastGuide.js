@@ -7,7 +7,7 @@ client.ready(() => {
     client.calls.createCallBroadcast({
       body: {
         name: 'Call Broadcast',
-        fromNumber: 12135551189,
+        fromNumber: '12135551189',
         answeringMachineConfig: 'AM_AND_LIVE',
         sounds: {
           liveSoundText: 'Hello! This is a live answer text to speech recording',

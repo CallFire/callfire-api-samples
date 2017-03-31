@@ -16,4 +16,6 @@ response = client.texts.findTextBroadcasts(
     fields='items(id,name,status,message)'
 ).result()
 
+# see sample JSON response for this API
+# on 'curl' samples tab
 print(response)

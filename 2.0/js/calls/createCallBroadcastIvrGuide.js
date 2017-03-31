@@ -7,7 +7,7 @@ client.ready(() => {
     client.calls.createCallBroadcast({
       body: {
         name: 'Call Broadcast',
-        fromNumber: 12135551189,
+        fromNumber: '12135551189',
         labels: [
           'ivr tag',
           'id-10002'

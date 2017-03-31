@@ -7,7 +7,7 @@ client.ready(() => {
     client.calls.createCallBroadcast({
       body: {
         name: 'Charity Campaign',
-        fromNumber: 12135551189,
+        fromNumber: '12135551189',
         answeringMachineConfig: 'AM_AND_LIVE',
         labels: [
           'charity',
@@ -20,7 +20,7 @@ client.ready(() => {
           machineSoundTextVoice: 'MALE1',
           transferSoundText: 'Please wait a moment, call is being transfer.',
           transferDigit: 1,
-          transferNumber: 12314557676,
+          transferNumber: '12314557676',
         },
         localTimeRestriction: {
           beginHour: 9,
@@ -61,14 +61,14 @@ client.ready(() => {
         },
         recipients: [
           {
-            phoneNumber: 12135551100,
+            phoneNumber: '12135551100',
             attributes: {
               age: 30,
               position: 'Manager'
             }
           },
           {
-            phoneNumber: 12135771188,
+            phoneNumber: '12135771188',
             attributes: {
               external_system_id: 34347770001,
               call_label: 'friends'

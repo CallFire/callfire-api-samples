@@ -11,4 +11,6 @@ response = client.texts.getTextBroadcastStats(
     fields='totalOutboundCount,billedAmount,sentCount'
 ).result()
 
+# see sample JSON response for this API
+# on 'curl' samples tab
 print(response)
