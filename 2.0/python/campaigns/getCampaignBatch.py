@@ -1,13 +1,10 @@
 from callfire.client import CallfireClient
 
 client = CallfireClient('api-login', 'api-password')
-response = client.keywords.findKeywordLeases(
-    # search offset
-    offset=0,
-    # return 10 items per request
-    limit=10,
+response = client.campaigns.getCampaignBatch(
+    id=379506003,
     # return only specific fields
-    fields='items(keyword,leaseBegin,leaseEnd)'
+    fields='name,status,size'
 ).result()
 
 # see sample JSON response for this API
