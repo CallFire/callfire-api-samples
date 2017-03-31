@@ -1,10 +1,7 @@
 from callfire.client import CallfireClient
 
 client = CallfireClient('api-login', 'api-password')
-response = client.campaigns.postFileCampaignSound(
-    name='campaign sound',
-    file=open('sound1.mp3', 'rb')
-).result()
+response = client.contacts.getDoNotContact(number='12135551126').result()
 
 # see sample JSON response for this API
 # on 'curl' samples tab

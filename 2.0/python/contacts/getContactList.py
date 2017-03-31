@@ -1,9 +1,10 @@
 from callfire.client import CallfireClient
 
 client = CallfireClient('api-login', 'api-password')
-response = client.campaigns.postFileCampaignSound(
-    name='campaign sound',
-    file=open('sound1.mp3', 'rb')
+response = client.contacts.getContactList(
+    id=379506003,
+    # return only specific fields
+    fields='id,name,size,created'
 ).result()
 
 # see sample JSON response for this API

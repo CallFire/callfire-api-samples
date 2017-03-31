@@ -1,9 +1,9 @@
 from callfire.client import CallfireClient
 
 client = CallfireClient('api-login', 'api-password')
-response = client.campaigns.postFileCampaignSound(
-    name='campaign sound',
-    file=open('sound1.mp3', 'rb')
+response = client.contacts.createContactListFromFile(
+    name='My Contact List',
+    file=open('contacts.csv', 'r')
 ).result()
 
 # see sample JSON response for this API

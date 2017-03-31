@@ -1,9 +1,10 @@
 from callfire.client import CallfireClient
 
 client = CallfireClient('api-login', 'api-password')
-client.campaigns.updateCampaignBatch(
-    id=379506003,
+client.contacts.updateDoNotContact(
+    number='12132000381',
     body={
-        'enabled': True
+        'call': True,
+        'text': False
     }
 ).result()
