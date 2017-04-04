@@ -56,6 +56,6 @@ curl -u username:password -H "Content-Type:application/json" -X PUT -d '
         "month": 12,
         "day": 30
       }
-    },
+    }
   ]
 }' "https://api.callfire.com/v2/calls/broadcasts/10030003"

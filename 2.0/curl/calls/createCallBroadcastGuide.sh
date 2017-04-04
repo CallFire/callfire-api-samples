@@ -49,5 +49,5 @@ curl -u username:password -H "Content-Type:application/json" -X POST -d '
               "MOBILE_PHONE",
               "WORK_PHONE"
             ]
-          },
+          }
     }' "https://api.callfire.com/v2/calls/broadcasts"

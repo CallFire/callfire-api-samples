@@ -36,7 +36,7 @@ curl -u "username:password" -H "Content-Type:application/json" -X PUT -d '
                     "TUESDAY",
                     "WEDNESDAY",
                     "THURSDAY",
-                    "FRIDAY",
+                    "FRIDAY"
                 ],
                 "timeZone": "America/New_York"
             },

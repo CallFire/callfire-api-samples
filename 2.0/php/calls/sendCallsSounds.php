@@ -6,15 +6,16 @@ class ApiClientSample{
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->sendCalls();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
-        $request->getOperationConfig()->setQueryParameters(array("campaignId" => 13454234323));
         $body = '[
                     {
                         "phoneNumber":"12135551100",
-                        "liveMessage":"Why hello there!"
+                        "liveMessage":"Hello, Alice, this is message for live answer",
+                        "machineMessage":"Hello, Alice, this is message for answering machine"
                     },
                     {
                         "phoneNumber":"12135551101",
-                        "liveMessage":"And hello to you too."
+                        "liveMessage":"Hello, Bob, this is message for live answer",
+                        "machineMessage":"Hello, Bob, this is message for answering machine"
                     }
                 ]';
         $request->getOperationConfig()->setBodyParameter($body);

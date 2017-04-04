@@ -25,7 +25,7 @@ curl -u username:password -H "Content-Type:application/json" -X POST -d '
             },
             {
                 "phoneNumber":"13233834488",
-                "message": "Hi ${u_name}, the megic number is ${magic_number}"
+                "message": "Hi ${u_name}, the megic number is ${magic_number}",
                 "attributes": {
                     "u_name": "Jane",
                     "magic_number": "10"

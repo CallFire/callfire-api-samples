@@ -4,17 +4,16 @@ class ApiClientSample{
 
     public static function main(){
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
-        $request = $client->sendCalls();
+        $request = $client->sendTexts();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
-        $request->getOperationConfig()->setQueryParameters(array("campaignId" => 13454234323));
         $body = '[
                     {
                         "phoneNumber":"12135551100",
-                        "liveMessage":"Why hello there!"
-                    },
-                    {
-                        "phoneNumber":"12135551101",
-                        "liveMessage":"And hello to you too."
+                        "message":"Your one-time code is 2517",
+                        "attributes":
+                        {
+                            "external_user_id":"45450007002"
+                        }
                     }
                 ]';
         $request->getOperationConfig()->setBodyParameter($body);
