@@ -1,8 +1,8 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->findTexts();
         $request->getOperationConfig()->setQueryParameters(array("campaignId" => 13,

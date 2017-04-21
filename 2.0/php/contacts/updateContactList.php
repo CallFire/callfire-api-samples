@@ -1,15 +1,15 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->updateContactList();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
-        $request->getOperationConfig()->setPathParameters(array("id" => 4103));
+        $request->getOperationConfig()->setPathParameters(array("id" => 11646003));
         $body = '{
-                    "name":"sampleListName"
-                }';
+                    "name":"contact list updated"
+                 }';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());

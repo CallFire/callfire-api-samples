@@ -5,6 +5,6 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        client.CampaignSoundsApi.Delete(12345);
+        client.CampaignSoundsApi.Delete(11646003);
     }
 }

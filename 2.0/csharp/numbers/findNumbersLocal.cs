@@ -8,7 +8,18 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        var request = new FindNumbersLocalRequest {Limit = 2, Zipcode = "90401"};
+        var request = new FindNumbersLocalRequest
+        {
+            Prefix = "14245",
+            City = "Los Angeles",
+            State = "CA",
+            Zipcode = "90940",
+            Lata = "123",
+            RateCenter = "123",
+            Offset = 0,
+            Limit = 10,
+            Fields = "items(number,nationalFormat,leaseBegin,leaseEnd,region/city)"
+        };
         IList<Number> numbers = client.NumbersApi.FindNumbersLocal(request);
     }
 }

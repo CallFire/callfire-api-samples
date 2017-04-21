@@ -1,6 +1,6 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
     public static function main() {
         $client =\CallFire\Api\DocumentedClient::createClient ("login", "password");
@@ -11,7 +11,7 @@ class ApiClientSample{
                     "resource":"OutboundText",
                     "events":["Finished"],
                     "callback":"https://callback-service.com/listener"
-                }';
+                 }';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());

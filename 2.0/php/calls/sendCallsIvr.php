@@ -1,8 +1,8 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->sendCalls();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
@@ -15,7 +15,7 @@ class ApiClientSample{
                         },
                         "dialplanXml":"<dialplan name=\"Root\"> <amd> <live> <goto>live</goto> </live> <machine> <goto>hangup</goto> </machine> </amd> <menu maxDigits=\"1\" timeout=\"3500\" name=\"live\"> <play type=\"tts\" voice=\"female1\" name=\"play_msg\">Hello, ${contact.firstName}, this is CallFire IVR message.</play> <keypress pressed=\"1\"> <goto>live</goto> </keypress> <keypress pressed=\"timeout\"> <hangup/> </keypress> </menu> <hangup name=\"hangup\"/> </dialplan> "
                     }
-                ]';
+                 ]';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());

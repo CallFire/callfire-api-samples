@@ -14,7 +14,7 @@ response = client.calls.addCallBroadcastBatch(
                     'custom_external_id': 30005044,
                     'custom_property_1': 'value1'
                 }
-            },
+            }
         ],
         # or you can add contacts from particular contact list
         # contactListId: 70055003,

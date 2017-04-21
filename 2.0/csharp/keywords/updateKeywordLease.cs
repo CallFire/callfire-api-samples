@@ -8,9 +8,10 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var lease = new KeywordLease
         {
-            KeywordName = "CALLFIRE",
+            KeywordName = "SUN",
             AutoRenew = false
         };
         client.KeywordLeasesApi.Update(lease);
     }
 }
+

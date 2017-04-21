@@ -7,6 +7,6 @@ public class ApiClientSample
     {
         var client = new CallfireClient("api_login", "api_password");
         // limit returned fields if needed
-        Text text = client.TextsApi.Get(600537356003, "id,fromNumber,state");
+        Text text = client.TextsApi.Get(379506003, "fromNumber,toNumber,modified,finalTextResult");
     }
 }

@@ -8,6 +8,6 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api login", "api password");
         WebhooksApi api = client.webhooksApi();
-        List<WebhookResource> resources = api.findWebhookResources("items(resource)");
+        List<WebhookResource> resources = api.findWebhookResources("items(events)");
     }
 }

@@ -7,11 +7,10 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api login", "api password");
         Webhook webhook = new Webhook();
-        webhook.setName("new webhook");
-        webhook.setResource(ResourceType.CALL_BROADCAST);
-        webhook.getEvents().add(ResourceType.ResourceEvent.STARTED);
+        webhook.setName("sms sent");
+        webhook.setResource(ResourceType.OUTBOUND_TEXT);
         webhook.getEvents().add(ResourceType.ResourceEvent.FINISHED);
-        webhook.setCallback("https://yoursite.com/callback");
+        webhook.setCallback("https://callback-service.com/listener");
         ResourceId id = client.webhooksApi().create(webhook);
     }
 }

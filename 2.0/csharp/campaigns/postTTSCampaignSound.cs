@@ -9,7 +9,8 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var tts = new TextToSpeech
         {
-            Message = "this is TTS message from csharp client"
+            Message = "This is a TTS sound",
+            Voice = Voice.MALE1
         };
         ResourceId resourceId = client.CampaignSoundsApi.CreateFromTts(tts);
     }

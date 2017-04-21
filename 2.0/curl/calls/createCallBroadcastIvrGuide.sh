@@ -2,7 +2,7 @@
 
 curl -u username:password -H "Content-Type:application/json" -X POST -d '
 {
-  "name": "IVR Campaign",
+  "name": "Call Broadcast",
   "fromNumber": "12135551189",
   "labels": [
     "ivr tag",

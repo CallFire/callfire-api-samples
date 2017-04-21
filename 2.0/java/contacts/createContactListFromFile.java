@@ -6,7 +6,7 @@ import java.io.File;
 class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api login", "api password");
-        File file = new File("/contacts/contacts-list.csv");
-        ResourceId resourceId = client.contactListsApi().createFromCsv("New contact list", file);
+        File file = new File("/contacts.csv");
+        ResourceId resourceId = client.contactListsApi().createFromCsv("My Contact List", file);
     }
 }

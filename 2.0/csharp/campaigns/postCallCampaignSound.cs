@@ -9,8 +9,8 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var callCreateSound = new CallCreateSound
         {
-            Name = "call_in_sound",
-            ToNumber = "12132212384"
+            Name = "Sound 1",
+            ToNumber = "12135551122"
         };
         ResourceId resourceId = client.CampaignSoundsApi.RecordViaPhone(callCreateSound);
     }

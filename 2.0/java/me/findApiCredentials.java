@@ -7,7 +7,7 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient callfireClient = new CallfireClient("account_login", "account_password");
         CommonFindRequest request = CommonFindRequest.create()
-            .limit(2L)
+            .fields("name,enabled")
             .build();
         Page<ApiCredentials> credentials = callfireClient.meApi().findApiCredentials(request);
     }

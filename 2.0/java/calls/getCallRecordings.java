@@ -6,6 +6,6 @@ import java.util.List;
 class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
-        List<CallRecording> recs = client.callsApi().getCallRecordings(1232L, "items(callId)");
+        List<CallRecording> recs = client.callsApi().getCallRecordings(379506003L, "items(callId,campaignId,lengthInBytes,mp3Url)");
     }
 }

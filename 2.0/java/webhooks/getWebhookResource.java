@@ -7,6 +7,6 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api login", "api password");
         WebhooksApi api = client.webhooksApi();
-        WebhookResource resource = api.findWebhookResource(ResourceType.CALL_BROADCAST, "resource");
+        WebhookResource resource = api.findWebhookResource(ResourceType.CALL_BROADCAST, "resource,events");
     }
 }

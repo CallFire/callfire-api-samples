@@ -7,8 +7,10 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
         GetByIdRequest request = GetByIdRequest.create()
-            .id(1234L)
+            .id(11646003L)
+            .offset(0L)
             .limit(10L)
+            .fields("items(name,status,size,remaining)")
             .build();
         Page<Batch> batches = client.callBroadcastsApi().getBatches(request);
     }

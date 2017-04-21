@@ -10,8 +10,13 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         FindSoundsRequest request = new FindSoundsRequest
         {
-            Limit = 3,
-            Filter = "sample"
+            Filter = "name",
+            IncludeArchived = true,
+            IncludePending = true,
+            IncludeScrubbed = true,
+            Offset = 0,
+            Limit = 10,
+            Fields = "items(id,name,callback)"
         };
         Page<CampaignSound> campaignSounds = client.CampaignSoundsApi.Find(request);
     }

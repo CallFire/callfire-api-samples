@@ -6,6 +6,6 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        TextAutoReply autoReply = client.TextAutoRepliesApi.Get(123456);
+        TextAutoReply autoReply = client.TextAutoRepliesApi.Get(379506003, "keyword,message");
     }
 }

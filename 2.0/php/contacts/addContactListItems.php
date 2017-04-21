@@ -1,12 +1,12 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request1 = $client->addContactListItems();
         $request1->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
-        $request1->getOperationConfig()->setPathParameters(array("id" => 3));
+        $request1->getOperationConfig()->setPathParameters(array("id" => 45006708003));
         $body = '{
                     "contacts":
                     [
@@ -25,14 +25,14 @@ class ApiClientSample{
                             }
                         }
                     ]
-                }';
+                 }';
         $request1->getOperationConfig()->setBodyParameter($body);
         $result1 = $client->request($request1);
         $json = json_decode($result1->getBody());
 
         $request2 = $client->addContactListItems();
         $request2->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
-        $request2->getOperationConfig()->setPathParameters(array("id" => 3));
+        $request2->getOperationConfig()->setPathParameters(array("id" => 45006708003));
         $body = '{
                     "contactIds":
                     [
@@ -41,14 +41,14 @@ class ApiClientSample{
                         800834187003,
                         800984185003
                     ]
-                }';
+                 }';
         $request2->getOperationConfig()->setBodyParameter($body);
         $result2 = $client->request($request2);
         $json = json_decode($result2->getBody());
 
         $request3 = $client->addContactListItems();
         $request3->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
-        $request3->getOperationConfig()->setPathParameters(array("id" => 3));
+        $request3->getOperationConfig()->setPathParameters(array("id" => 45006708003));
         $body = '{
                     "contactNumbers":
                     [
@@ -57,7 +57,7 @@ class ApiClientSample{
                         "12133312300"
                     ],
                     "contactNumbersField":"workPhone"
-                }';
+                 }';
         $request3->getOperationConfig()->setBodyParameter($body);
         $result3 = $client->request($request3);
         $json = json_decode($result3->getBody());

@@ -6,7 +6,7 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
         NumberConfig config = new NumberConfig();
-        config.setNumber("16502572135");
+        config.setNumber("19206596476");
         config.setConfigType(NumberConfig.ConfigType.IVR);
         // create IVR config
         IvrInboundConfig ivrInboundConfig = new IvrInboundConfig();

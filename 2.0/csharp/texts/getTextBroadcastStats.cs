@@ -7,8 +7,8 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        var begin = DateTime.Now.AddDays(-5d);
-        var end = DateTime.Now;
-        BroadcastStats stats = client.TextBroadcastsApi.GetStats(8624192003L, null, begin, end);
+        var begin = new DateTime(2016, 9, 13, 15, 50, 17);
+        var end = new DateTime(2016, 9, 13, 15, 50, 17);
+        BroadcastStats stats = client.TextBroadcastsApi.GetStats(11646003, "totalOutboundCount,billedAmount,sentCount", begin, end);
     }
 }

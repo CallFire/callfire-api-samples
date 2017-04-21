@@ -8,7 +8,7 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        var request = new CommonFindRequest {Limit = 2};
+        var request = new CommonFindRequest { Fields = "name,enabled" };
         Page<ApiCredentials> apiCredentials = client.MeApi.FindApiCredentials(request);
     }
 }

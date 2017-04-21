@@ -1,6 +1,7 @@
 using CallfireApiClient;
 using CallfireApiClient.Api.Contacts.Model;
 using CallfireApiClient.Api.Contacts.Model.Request;
+using System.Collections.Generic;
 
 public class ApiClientSample
 {
@@ -9,8 +10,9 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         FindUniversalDncsRequest request = new FindUniversalDncsRequest()
         {
-            // find all universal DNCs which prohibit from contacting toNumber
-            ToNumber = "12135551188"
+            ToNumber = "12135551126",
+            FromNumber = "12130021127",
+            Fields = "toNumber,inboundCall,outboundCall"
         };
         IList<UniversalDnc> universalDncs = client.DncApi.FindUniversalDncs(request);
     }

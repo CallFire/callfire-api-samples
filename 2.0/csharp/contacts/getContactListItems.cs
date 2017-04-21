@@ -10,9 +10,12 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var request = new GetByIdRequest
         {
-            Id = 123456,
-            Limit = 100
+            Id = 379506003,
+            Offset = 0,
+            Limit = 10,
+            Fields = "items(firstName,lastName,workPhone)"
         };
         Page<Contact> contacts = client.ContactListsApi.GetListItems(request);
     }
 }
+

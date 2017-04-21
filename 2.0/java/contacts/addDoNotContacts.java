@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import com.callfire.api.client.CallfireClient;
 import com.callfire.api.client.api.contacts.model.request.CreateDncsRequest;
 
@@ -10,9 +12,9 @@ class ApiClientSample {
             // prohibit texting to given phone numbers
             .text(true)
             // the list of phone numbers
-            .numbers(Arrays.asList("12135551188", "12135771124"))
+            .numbers(Arrays.asList("12132000381", "12132000382", "12132000383"))
             // optional the name of the source
-            .source("My DNCs List 1")
+            .source("My DNC list 1")
             .build();
         client.dncApi().create(request);
     }

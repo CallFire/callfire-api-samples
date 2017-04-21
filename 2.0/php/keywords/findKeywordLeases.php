@@ -1,15 +1,17 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->findKeywordLeases();
-        $request->getOperationConfig()->setQueryParameters(array("limit" => 1,
-                                                                 "offset" => 5));
+        $request->getOperationConfig()->setQueryParameters(array("offset" => 0,
+                                                                 "limit" => 10,
+                                                                 "fields" => "items(keyword,leaseBegin,leaseEnd)"));
         $result = $client->request($request);
         $json = json_decode($result->getBody());
     }
 }
 
 ApiClientSample::main();
+

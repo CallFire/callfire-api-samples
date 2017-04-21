@@ -1,8 +1,8 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->findKeywords();
         $request->getOperationConfig()->setQueryParameters(array("keywords" => "SUN",
@@ -13,3 +13,4 @@ class ApiClientSample{
 }
 
 ApiClientSample::main();
+

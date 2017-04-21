@@ -7,6 +7,6 @@ public class ApiClientSample
     {
         var client = new CallfireClient("api_login", "api_password");
         // limit returned fields if needed, e.g. "name,status,lengthInSeconds"
-        CampaignSound campaignSound = client.CampaignSoundsApi.Get(12345);
+        CampaignSound campaignSound = client.CampaignSoundsApi.Get(379506003, "name,lengthInSeconds");
     }
 }

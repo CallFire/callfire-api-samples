@@ -40,7 +40,7 @@ class ApiClientSample {
         broadcast.setRetryConfig(retryConfig);
 
         // create broadcast with 'start' argument = true to start campaign immediately
-        ResourceId id = client.callBroadcastsApi().create(broadcast, true);
+        ResourceId id = client.callBroadcastsApi().create(broadcast);
 
         System.out.println(id);
     }

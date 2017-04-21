@@ -8,6 +8,6 @@ public class ApiClientSample
     {
         var client = new CallfireClient("api_login", "api_password");
         // limit returned fields if needed
-        IList<CallRecording> recordings = client.CallsApi.GetCallRecordings(1234, "items(callId)");
+        IList<CallRecording> recordings = client.CallsApi.GetCallRecordings(379506003, "items(callId,campaignId,lengthInBytes,mp3Url)");
     }
 }

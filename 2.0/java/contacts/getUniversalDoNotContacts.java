@@ -8,9 +8,11 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api login", "api password");
         FindUniversalDncsRequest request = FindUniversalDncsRequest.create()
-            // find all universal DNCs which prohibit from contacting toNumber
-            .toNumber("12135551188")
+            .toNumber("12135551126")
+            .fromNumber("12130021127")
+            .fields("toNumber,inboundCall,outboundCall")
             .build();
         List<UniversalDnc> universalDncs = client.dncApi().findUniversalDncs(request);
     }
 }
+

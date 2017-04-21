@@ -5,8 +5,10 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api login", "api password");
         Contact contact = new Contact();
-        contact.setId(463633187003L);
-        contact.setHomePhone("16505044730");
+        contact.setId(11646003L);
+        contact.setMobilePhone("12136600123");
+        contact.setWorkPhone("14553320089");
         client.contactsApi().update(contact);
     }
 }
+

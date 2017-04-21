@@ -19,7 +19,7 @@ curl -u username:password -H "Content-Type:application/json" -X POST -d '
                 }
             }
         ]
-    }' "https://api.callfire.com/v2/contacts/lists/3/items"
+    }' "https://api.callfire.com/v2/contacts/lists/45006708003/items"
 
 curl -u username:password -H "Content-Type:application/json" -X POST -d '
     {
@@ -30,7 +30,7 @@ curl -u username:password -H "Content-Type:application/json" -X POST -d '
             800834187003,
             800984185003
         ]
-    }' "https://api.callfire.com/v2/contacts/lists/3/items"
+    }' "https://api.callfire.com/v2/contacts/lists/45006708003/items"
 
 curl -u username:password -H "Content-Type:application/json" -X POST -d '
     {
@@ -41,5 +41,5 @@ curl -u username:password -H "Content-Type:application/json" -X POST -d '
             "12133312300"
         ],
         "contactNumbersField":"workPhone"
-    }' "https://api.callfire.com/v2/contacts/lists/3/items"
+    }' "https://api.callfire.com/v2/contacts/lists/45006708003/items"
 

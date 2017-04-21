@@ -10,8 +10,12 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var request = new FindBroadcastsRequest
         {
-            Name = "campaign name",
-            Limit = 1
+            Name = "broadcast name",
+            Label = "my label",
+            Running = true,
+            Offset = 0,
+            Limit = 10,
+            Fields = "items(id,name,status,message)"
         };
         Page<TextBroadcast> broadcasts = client.TextBroadcastsApi.Find(request);
     }

@@ -5,11 +5,9 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api login", "api password");
         UpdateDncRequest request = UpdateDncRequest.create()
-            // prohibit dialing to phone number
             .call(true)
-            // allow text messaging
             .text(false)
-            .number("12135551188")
+            .number("'12132000381'")
             .build();
         client.dncApi().update(request);
     }

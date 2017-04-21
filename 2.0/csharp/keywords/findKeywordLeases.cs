@@ -10,9 +10,9 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var request = new CommonFindRequest
         {
-            // pagination if needed
-            Limit = 5,
-            Offset = 10
+            Offset = 0,
+            Limit = 10,
+            Fields = "items(keyword,leaseBegin,leaseEnd)"
         };
         Page<KeywordLease> leases = client.KeywordLeasesApi.Find(request);
     }

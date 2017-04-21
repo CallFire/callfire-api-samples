@@ -2,7 +2,6 @@ from callfire.client import CallfireClient
 
 client = CallfireClient('api-login', 'api-password')
 response = client.contacts.addDoNotContacts(
-    id=45006708003,
     body={
         'source': 'My DNC list 1',
         'call': True,

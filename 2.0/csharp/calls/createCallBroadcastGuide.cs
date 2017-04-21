@@ -10,21 +10,18 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var broadcast = new CallBroadcast
         {
-            Name = "Voice Campaign",
+            Name = "Call Broadcast",
             // set validated Caller ID number.
             FromNumber = "12135551189",
             // attach custom labels if needed
-            Labels = new List<string> {"voice tag", "id-10002"},
+            Labels = new List<string> { "voice tag", "id-10002" },
             // set answering machine detection
             AnsweringMachineConfig = AnsweringMachineConfig.AM_AND_LIVE,
             // set voice messages using TTS option for Live answers and when Answering Machine is detected.
-            // you also can set a pre-defined TTS voice.
             Sounds = new CallBroadcastSounds
             {
                 LiveSoundText = "Hello! This is a live answer text to speech recording",
-                LiveSoundTextVoice = Voice.MALE1,
                 MachineSoundText = "This is an answering machine text to speech recording",
-                MachineSoundTextVoice = Voice.MALE1
             },
             // allow CallFire to dial recipient only between 09:00 - 18:00 depending on
             //  recipient's number area code timezone
@@ -54,7 +51,7 @@ public class ApiClientSample
             {
                 MaxAttempts = 2,
                 MinutesBetweenAttempts = 5,
-                RetryResults = new List<RetryResults> {RetryResults.BUSY, RetryResults.NO_ANS},
+                RetryResults = new List<RetryResults> { RetryResults.BUSY, RetryResults.NO_ANS },
                 RetryPhoneTypes = new List<RetryPhoneTypes>
                 {
                     RetryPhoneTypes.MOBILE_PHONE,
@@ -64,7 +61,6 @@ public class ApiClientSample
         };
 
         // create broadcast with 'start' argument = true to start campaign immediately
-        var id = client.CallBroadcastsApi.Create(broadcast, false);
+        var id = client.CallBroadcastsApi.Create(broadcast);
     }
 }
-

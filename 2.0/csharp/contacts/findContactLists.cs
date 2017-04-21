@@ -9,7 +9,13 @@ public class ApiClientSample
     {
         var client = new CallfireClient("api_login", "api_password");
 
-        var request = new FindContactListsRequest {Limit = 1, Offset = 0};
+        var request = new FindContactListsRequest
+        {
+            Name = "my list",
+            Offset = 0,
+            Limit = 10,
+            Fields = "items(id,name,size)"
+        };
         Page<ContactList> contactLists = client.ContactListsApi.Find(request);
     }
 }

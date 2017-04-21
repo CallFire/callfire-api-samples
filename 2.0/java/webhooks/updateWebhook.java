@@ -5,12 +5,10 @@ import com.callfire.api.client.api.webhooks.model.Webhook;
 class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api login", "api password");
-        Webhook webhook = client.webhooksApi().get(12345678L);
-        webhook.setName("new webhook");
-        webhook.setResource(ResourceType.CALL_BROADCAST);
-        webhook.getEvents().add(ResourceType.ResourceEvent.STARTED);
+        Webhook webhook = client.webhooksApi().get(11646003L);
+        webhook.setName("sms sent update");
         webhook.getEvents().add(ResourceType.ResourceEvent.FINISHED);
-        webhook.setCallback("https://yoursite.com/callback");
+        webhook.setCallback("https://callback-service.com/listener2");
         client.webhooksApi().update(webhook);
     }
 }

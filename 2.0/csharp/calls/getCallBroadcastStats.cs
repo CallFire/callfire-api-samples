@@ -7,9 +7,9 @@ public class ApiClientSample
     {
         var client = new CallfireClient("api_login", "api_password");
         // limit returned fields if needed
-        var fields = "callsAttempted,callsPlaced,callsDuration";
-        var begin = DateTime.Now.AddDays(-5d);
-        var end = DateTime.Now;
-        var stats = client.CallBroadcastsApi.GetStats(8624192003L, fields, begin, end);
+        var fields = "totalOutboundCount,billedAmount,callsAttempted";
+        var begin = new DateTime(2016, 9, 13, 15, 50, 17);
+        var end = new DateTime(2016, 9, 13, 15, 50, 17);
+        var stats = client.CallBroadcastsApi.GetStats(11646003, fields, begin, end);
     }
 }

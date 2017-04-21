@@ -14,8 +14,8 @@ class ApiClientSample {
         FindCallsRequest request = FindCallsRequest.create()
             .campaignId(10L)
             .label("reminders")
-            .intervalBegin(new GregorianCalendar(2015, Calendar.DECEMBER, 1, 0, 0, 0).getTime())
-            .intervalEnd(new GregorianCalendar(2015, Calendar.DECEMBER, 10, 0, 0, 0).getTime())
+            .intervalBegin(new GregorianCalendar(2015, Calendar.NOVEMBER, 30, 22, 0, 0).getTime())
+            .intervalEnd(new GregorianCalendar(2015, Calendar.DECEMBER, 9, 22, 0, 0).getTime())
             .limit(10L)
             .build();
         Page<Call> calls = client.callsApi().find(request);

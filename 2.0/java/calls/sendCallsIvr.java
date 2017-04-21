@@ -1,22 +1,27 @@
 import com.callfire.api.client.CallfireClient;
 import com.callfire.api.client.api.callstexts.model.Call;
 import com.callfire.api.client.api.callstexts.model.CallRecipient;
+import com.callfire.api.client.api.callstexts.model.request.SendCallsRequest;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
-        //Only "recipients" param required
         CallRecipient r1 = new CallRecipient();
         r1.setPhoneNumber("12135551100");
         r1.setDialplanXml(buildDialplanXml());
-
+        r1.getAttributes().put("external_user_id", "45450007002");
         List<CallRecipient> recipients = Arrays.asList(r1);
-        List<Call> calls = client.callsApi().send(recipients);
-        // In case you want to send call via existing campaign provide campaign id as second parameter for send() method
-        // calls = client.callsApi().send(Arrays.asList(recipient), 60000000003L);
+
+        SendCallsRequest request = new SendCallsRequest().create()
+            .recipients(recipients)
+            .build();
+
+        List<Call> calls = client.callsApi().send(request);
     }
 
     private static String buildDialplanXml() {
@@ -44,6 +49,6 @@ class ApiClientSample {
                 + "     </keypress>                                                               "
                 + " </menu>                                                                       "
                 + " <hangup name=\"hangup\"/>                                                     "
-                + "</dialplan>                                                                    ";    
+                + "</dialplan>                                                                    ";
     }
 }

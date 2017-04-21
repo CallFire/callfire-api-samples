@@ -5,6 +5,6 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        client.TextBroadcastsApi.Archive(123456);
+        client.TextBroadcastsApi.Archive(11646003);
     }
 }

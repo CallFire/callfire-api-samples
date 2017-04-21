@@ -12,10 +12,14 @@ public class ApiClientSample
 
         var request = new FindContactsRequest
         {
-            Number = new List<string> {"16506190257", "18778973473"},
-            Id = new List<long> {1, 2},
-            Limit = 1,
-            Offset = 0
+            Id = new List<long> { 11646003, 12646003, 13776003 },
+            Number = new List<string> { "12135551126", "12136666123" },
+            ContactListId = 14400809003,
+            PropertyName = "14400809003",
+            PropertyValue = "14400809003",
+            Offset = 0,
+            Limit = 10,
+            Fields = "items(id,name,size)"
         };
         Page<Contact> contacts = client.ContactsApi.Find(request);
     }

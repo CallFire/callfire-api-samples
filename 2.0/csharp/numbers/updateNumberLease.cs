@@ -8,8 +8,9 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var lease = new NumberLease
         {
-            PhoneNumber = "16502572135",
-            AutoRenew = true
+            PhoneNumber = "19206596476",
+            AutoRenew = false,
+            CallFeatureStatus = NumberLease.FeatureStatus.DISABLED
         };
         client.NumberLeasesApi.Update(lease);
     }

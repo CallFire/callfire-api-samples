@@ -8,10 +8,10 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient callfireClient = new CallfireClient("api_login", "api_password");
         // request for buying particular numbers
-        NumberPurchaseRequest request = NumberPurchaseRequest.create()
+        NumberPurchaseRequest request1 = NumberPurchaseRequest.create()
             .numbers(Arrays.asList("12131234567", "12131234568"))
             .build();
-        ResourceId resourceId = callfireClient.ordersApi().orderNumbers(request);
+        ResourceId resourceId1 = callfireClient.ordersApi().orderNumbers(request1);
 
         // request for buying numbers in specific area
         NumberPurchaseRequest request2 = NumberPurchaseRequest.create()

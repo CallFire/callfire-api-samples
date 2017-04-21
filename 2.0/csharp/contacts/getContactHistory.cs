@@ -9,8 +9,12 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var request = new GetByIdRequest
         {
-            Id = 123456
+            Id = 379506003,
+            Offset = 0,
+            Limit = 10,
+            Fields = "calls/fromNumber,calls/toNumber,texts/message"
         };
         ContactHistory contactHistory = client.ContactsApi.GetHistory(request);
     }
 }
+

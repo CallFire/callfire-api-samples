@@ -1,12 +1,12 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->getMediaDataByKey();
-        $request->getOperationConfig()->setPathParameters(array("key" => "450cffe3c128377a790df0059fb82fd6",
-                                                                "extension" => "image/gif"));
+        $request->getOperationConfig()->setPathParameters(array("key" => "f733daab-fc05-470d-abe6-87cd136599ad",
+                                                                "extension" => "mp3"));
         //Available media types:
         //JPEG("jpeg", "image/jpeg"),
         //PNG("png", "image/png"),
@@ -21,4 +21,3 @@ class ApiClientSample{
     }
 }
 
-ApiClientSample::main();

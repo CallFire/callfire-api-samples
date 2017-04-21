@@ -1,11 +1,10 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->createCallBroadcast();
-        $queryParameters = array('start' => false);
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
         $body = '{
                     "name":"Example API Call Broadcast",
@@ -13,7 +12,10 @@ class ApiClientSample{
                     "recipients":
                     [
                         {
-                            "phoneNumber":"2135551133"
+                            "phoneNumber":"2134441133"
+                        },
+                        {
+                            "phoneNumber":"2135551144"
                         }
                     ],
                     "answeringMachineConfig":"AM_AND_LIVE",
@@ -23,8 +25,7 @@ class ApiClientSample{
                         "machineSoundText":"This is an answering machine text to speech recording"
                     },
                     "resumeNextDay":"true"
-                }';
-        $request->getOperationConfig()->setQueryParameters($queryParameters);
+                 }';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());

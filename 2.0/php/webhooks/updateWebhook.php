@@ -1,18 +1,17 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->updateWebhook();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
-        $request->getOperationConfig()->setPathParameters(array("id" => 12345678));
+        $request->getOperationConfig()->setPathParameters(array("id" => 11646003));
         $body = '{
-                    "name":"API hook",
-                    "resource":"TEXT_BROADCAST",
-                    "events":["Stopped"],
-                    "callback":"https://callfire.com/stopTextsOnly"
-                }';
+                    "name":"sms sent update",
+                    "events":["Finished"],
+                    "callback":"https://callback-service.com/listener2"
+                 }';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());

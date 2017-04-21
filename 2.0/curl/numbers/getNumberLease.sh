@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-curl -u "username:password" -H "Content-Type:application/json" -X GET "https://api.callfire.com/v2/numbers/leases/19206596476"
+curl -u "username:password" -H "Content-Type:application/json" -X GET "https://api.callfire.com/v2/numbers/leases/12132000384?fields=number,nationalFormat,leaseBegin,leaseEnd,region/city"

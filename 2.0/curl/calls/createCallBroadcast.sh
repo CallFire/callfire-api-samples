@@ -4,13 +4,18 @@ curl -u username:password -H "Content-Type:application/json" -X POST -d '
     {
         "name":"Example API Call Broadcast",
         "fromNumber":"12135551189",
-        "recipients":[
+        "recipients":
+        [
             {
-                "phoneNumber":"2135551133"
+                "phoneNumber":"2134441133"
+            },
+            {
+                "phoneNumber":"2135551144"
             }
         ],
         "answeringMachineConfig":"AM_AND_LIVE",
-        "sounds":{
+        "sounds":
+        {
             "liveSoundText":"Hello! This is a live answer text to speech recording",
             "machineSoundText":"This is an answering machine text to speech recording"
         },

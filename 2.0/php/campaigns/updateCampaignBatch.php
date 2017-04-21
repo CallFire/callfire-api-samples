@@ -1,14 +1,14 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->updateCampaignBatch();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
-        $request->getOperationConfig()->setPathParameters(array("id" => 1));
+        $request->getOperationConfig()->setPathParameters(array("id" => 379506003));
         $body = '{
-                    "enabled":"false"
+                    "enabled": true
                  }';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);

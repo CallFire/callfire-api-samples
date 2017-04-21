@@ -6,6 +6,6 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        NumberConfig config = client.NumberLeasesApi.GetConfig("16502572135");
+        NumberConfig config = client.NumberLeasesApi.GetConfig("12132000384", "number,configType");
     }
 }

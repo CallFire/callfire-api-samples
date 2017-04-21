@@ -13,7 +13,7 @@ response = client.calls.addCallBroadcastRecipients(
                 'custom_external_id': 30005044,
                 'custom_property_1': 'value1'
             }
-        },
+        }
     ]
 ).result()
 

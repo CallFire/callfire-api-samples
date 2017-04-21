@@ -6,8 +6,8 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient callfireClient = new CallfireClient("api_login", "api_password");
         CallCreateSound callCreateSound = new CallCreateSound();
-        callCreateSound.setName("CallInSound_1");
-        callCreateSound.setToNumber("12131234567");
+        callCreateSound.setName("Sound 1");
+        callCreateSound.setToNumber("12135551122");
         ResourceId resourceId = callfireClient.campaignSoundsApi().recordViaPhone(callCreateSound);
     }
 }

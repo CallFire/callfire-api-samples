@@ -5,6 +5,6 @@ import java.io.InputStream;
 class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient callfireClient = new CallfireClient("api_login", "api_password");
-        InputStream is = callfireClient.campaignSoundsApi().getMp3(12345L);
+        InputStream is = callfireClient.campaignSoundsApi().getMp3(379506003L);
     }
 }

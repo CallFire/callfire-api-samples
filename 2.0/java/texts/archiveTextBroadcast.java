@@ -3,6 +3,6 @@ import com.callfire.api.client.CallfireClient;
 class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
-        client.textBroadcastsApi().archive(123L);
+        client.textBroadcastsApi().archive(11646003L);
     }
 }

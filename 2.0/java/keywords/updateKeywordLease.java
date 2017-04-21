@@ -5,8 +5,8 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
         KeywordLease keywordLease = new KeywordLease();
-        keywordLease.setKeyword("CALLFIRE");
-        keywordLease.setAutoRenew(true);
+        keywordLease.setKeyword("SUN");
+        keywordLease.setAutoRenew(false);
         client.keywordLeasesApi().update(keywordLease);
     }
 }

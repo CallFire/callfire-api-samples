@@ -5,8 +5,9 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
         NumberLease lease = new NumberLease();
-        lease.setNumber("16502572135");
-        lease.setAutoRenew(true);
+        lease.setNumber("19206596476");
+        lease.setAutoRenew(false);
+        lease.setCallFeatureStatus(NumberLease.FeatureStatus.DISABLED);
         client.numberLeasesApi().update(lease);
     }
 }

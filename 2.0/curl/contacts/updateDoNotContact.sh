@@ -3,6 +3,5 @@
 curl -u username:password -H "Content-Type:application/json" -X PUT -d '
     {
         "call": true,
-        "text": true,
-        "source": "My DNC list 1"
-    }' "https://api.callfire.com/v2/contacts/dncs/12132212384"
+        "text": false
+    }' "https://api.callfire.com/v2/contacts/dncs/12132000381"

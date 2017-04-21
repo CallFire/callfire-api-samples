@@ -8,10 +8,9 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var contact = new Contact
         {
-            Id = 463633187003,
-            FirstName = "Alice",
-            HomePhone = "16505044730",
-            WorkPhone = "12305022730"
+            Id = 11646003,
+            MobilePhone = "12136600123",
+            WorkPhone = "14553320089"
         };
         client.ContactsApi.Update(contact);
     }

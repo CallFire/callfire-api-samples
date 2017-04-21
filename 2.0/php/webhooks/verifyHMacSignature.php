@@ -1,7 +1,6 @@
 <?php
 
-function getHmacSignature($data, $secret)
-{
+function getHmacSignature($data, $secret) {
     return base64_encode(hash_hmac('sha1', $data, $secret, true));
 }
 

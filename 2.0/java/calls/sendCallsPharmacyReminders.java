@@ -1,6 +1,7 @@
 import com.callfire.api.client.CallfireClient;
 import com.callfire.api.client.api.callstexts.model.Call;
 import com.callfire.api.client.api.callstexts.model.CallRecipient;
+import com.callfire.api.client.api.callstexts.model.request.SendCallsRequest;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,13 +11,15 @@ class ApiClientSample {
         CallfireClient client = new CallfireClient("api_login", "api_password");
         CallRecipient r1 = new CallRecipient();
         r1.setPhoneNumber("12135551100");
-        r1.getAttributes().put("external_user_id", "45450007002");
         r1.setDialplanXml(buildDialplanXml());
-
+        r1.getAttributes().put("external_user_id", "45450007002");
         List<CallRecipient> recipients = Arrays.asList(r1);
-        List<Call> calls = client.callsApi().send(recipients);
-        // You can send individual calls through particular campaign
-        // calls = client.callsApi().send(Arrays.asList(recipient), 60000000003L);
+
+        SendCallsRequest request = new SendCallsRequest().create()
+            .recipients(recipients)
+            .build();
+
+        List<Call> calls = client.callsApi().send(request);
     }
 
     private static String buildDialplanXml() {

@@ -7,8 +7,8 @@ class ApiClientSample{
         $request = $client -> createApiCredential();
         $request -> getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
         $body = '{
-                    "name":"api_20_account"
-                }';
+                    "name":"api-integration"
+                 }';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());

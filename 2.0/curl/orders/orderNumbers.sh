@@ -2,7 +2,8 @@
 
 curl -u "username:password" -H "Content-Type:application/json" -X POST -d '
     {
-        "numbers":[
+        "numbers":
+        [
             "12131234567",
             "12131234568"
         ]

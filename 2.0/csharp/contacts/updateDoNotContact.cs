@@ -8,11 +8,9 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         UpdateDncRequest request = new UpdateDncRequest()
         {
-            // prohibit dialing to phone number
             Call = true,
-            // allow text messaging
             Text = false,
-            Number = "12135551188"
+            Number = "12132000381"
         };
         client.DncApi.Update(request);
     }

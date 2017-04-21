@@ -99,7 +99,7 @@ public class ApiClientSample
         };
 
         // create broadcast with 'start' argument = true to start campaign immediately
-        var id = client.CallBroadcastsApi.Create(broadcast, false);
+        var id = client.CallBroadcastsApi.Create(broadcast);
     }
 }
 

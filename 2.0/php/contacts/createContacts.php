@@ -1,8 +1,8 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->createContacts();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
@@ -16,27 +16,22 @@ class ApiClientSample{
                         "zipcode":"40460",
                         "properties":
                         {
-                            "custom_age":30,
-                            "custom_position":"Manager"
+                            "custom_ext_system_id":100200301
                         }
                     },
                     {
                         "firstName":"Bob",
                         "lastName":"Smith",
-                        "homePhone":"17885551111",
-                        "mobilePhone":"17886666122",
-                        "workPhone":"17883327700",
-                        "zipcode":"25600",
+                        "homePhone":"12135551127",
                         "properties":
                         {
-                            "custom_ext_system_id":100200301
+                            "custom_age":30,
+                            "custom_position":"Manager"
                         }
                     }
-                ]';
+                 ]';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());
     }
 }
-
-ApiClientSample::main();

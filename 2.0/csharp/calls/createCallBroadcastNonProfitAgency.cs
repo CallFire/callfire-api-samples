@@ -85,7 +85,7 @@ public class ApiClientSample
                 },
                 new Recipient
                 {
-                    PhoneNumber = "12135551101",
+                    PhoneNumber = "12135771188",
                     Attributes = new Dictionary<string, string>
                     {
                         {"external_system_id", "34347770001"},
@@ -101,7 +101,7 @@ public class ApiClientSample
         };
 
         // create broadcast with 'start' argument = true to start campaign immediately
-        var id = client.CallBroadcastsApi.Create(broadcast, false);
+        var id = client.CallBroadcastsApi.Create(broadcast);
     }
 }
 

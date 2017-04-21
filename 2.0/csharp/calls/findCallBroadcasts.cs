@@ -9,8 +9,12 @@ public class ApiClientSample
 
         var findRequest = new FindBroadcastsRequest
         {
-            Name = "campaign name",
-            Limit = 2
+            Name = "broadcast name",
+            Label = "my label",
+            Running = true,
+            Offset = 0,
+            Limit = 10,
+            Fields = "items(id,name,status,sounds)"
         };
         var broadcasts = client.CallBroadcastsApi.Find(findRequest);
     }

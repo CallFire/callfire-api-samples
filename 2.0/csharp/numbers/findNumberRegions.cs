@@ -10,9 +10,15 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var request = new FindNumberRegionsRequest
         {
-            Limit = 2,
-            State = "IL",
-            Zipcode = "60640"
+            Prefix = "14245",
+            City = "Los Angeles",
+            State = "CA",
+            Zipcode = "90940",
+            Lata = "123",
+            RateCenter = "123",
+            Offset = 0,
+            Limit = 10,
+            Fields = "items(number,nationalFormat,leaseBegin,leaseEnd,region/city)"
         };
         Page<Region> regions = client.NumbersApi.FindNumberRegions(request);
     }

@@ -7,8 +7,12 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
         FindTextBroadcastsRequest request = FindTextBroadcastsRequest.create()
-            .name("campaign")
-            .limit(2L)
+            .name("broadcast name")
+            .label("my label")
+            .running(true)
+            .offset(0L)
+            .limit(10L)
+            .fields("items(id,name,status,message)")
             .build();
         Page<TextBroadcast> broadcasts = client.textBroadcastsApi().find(request);
     }

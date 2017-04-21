@@ -1,12 +1,12 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->removeContactListItem();
-        $request->getOperationConfig()->setPathParameters(array("id" => 123456,
-                                                                "contactId" => 13487234844343));
+        $request->getOperationConfig()->setPathParameters(array("id" => 11646003,
+                                                                "contactId" => 22277003));
         $result = $client->request($request);
         $json = json_decode($result->getBody());
     }

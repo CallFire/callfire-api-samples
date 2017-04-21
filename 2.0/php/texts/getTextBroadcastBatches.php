@@ -1,16 +1,17 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->getTextBroadcastBatches();
-        $request->getOperationConfig()->setPathParameters(array("id" => 1234));
-        $request->getOperationConfig()->setQueryParameters(array("limit" => 10));
+        $request->getOperationConfig()->setPathParameters(array("id" => 11646003));
+        $request->getOperationConfig()->setQueryParameters(array("offset" => 0,
+                                                                 "limit" => 10,
+                                                                 "fields" => "items(name,status,size,remaining)"));
         $result = $client->request($request);
         $json = json_decode($result->getBody());
     }
 }
 
 ApiClientSample::main();
-

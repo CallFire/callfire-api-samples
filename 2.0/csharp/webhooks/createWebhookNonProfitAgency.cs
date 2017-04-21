@@ -10,10 +10,10 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var webhook = new Webhook
         {
-            Name = "OtboundCall webhook",
+            Name = "Call finished webhook",
             Resource = ResourceType.OUTBOUND_CALL,
             Events = new HashSet<ResourceEvent> {ResourceEvent.FINISHED},
-            Callback = "https://yoursite.com/callback"
+            Callback = "http://callback-service.com/webhook"
         };
         ResourceId resource = client.WebhooksApi.Create(webhook);
     }

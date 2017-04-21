@@ -9,7 +9,7 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var broadcast = new CallBroadcast
         {
-            Id = 10030003,
+            Id = 11646003,
             Schedules = new List<Schedule>
             {
                 // schedule a campaign to run on Saturday and Sunday between 2016-12-01 10:00:00
@@ -41,8 +41,6 @@ public class ApiClientSample
 
         // update broadcast with new schedules
         client.CallBroadcastsApi.Update(broadcast);
-        // if it's in 'Stopped' state you need to start it to apply the schedule
-        client.CallBroadcastsApi.Start(broadcast.Id.Value);
     }
 }
 

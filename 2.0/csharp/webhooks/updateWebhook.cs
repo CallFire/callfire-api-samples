@@ -9,15 +9,14 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var webhook = new Webhook
         {
-            Id = 12345678,
-            Name = "new webhook",
+            Id = 11646003,
+            Name = "sms sent update",
             Resource = ResourceType.TEXT_BROADCAST,
             Events = new HashSet<ResourceEvent>
             {
-                ResourceEvent.STARTED,
                 ResourceEvent.FINISHED
             },
-            Callback = "https://yoursite.com/callback"
+            Callback = "https://callback-service.com/listener2"
         };
         client.WebhooksApi.Update(webhook);
     }

@@ -6,6 +6,6 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        Stream stream = client.CallsApi.GetCallRecordingMp3ByName(1234, "testName");
+        Stream stream = client.CallsApi.GetCallRecordingMp3ByName(379506003, "call-recording1");
     }
 }

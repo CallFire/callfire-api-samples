@@ -6,9 +6,9 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
         TextAutoReply textAutoReply = new TextAutoReply();
-        textAutoReply.setNumber("12132226464");
-        textAutoReply.setMessage("test message");
-        textAutoReply.setMatch("vacation");
+        textAutoReply.setNumber("67076");
+        textAutoReply.setMessage("I am a leaf on the wind");
+        textAutoReply.setKeyword("CALLFIRE");
         ResourceId resourceId = client.textAutoRepliesApi().create(textAutoReply);
     }
 }

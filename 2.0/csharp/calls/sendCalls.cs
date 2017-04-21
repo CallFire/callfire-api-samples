@@ -1,29 +1,37 @@
 using System.Collections.Generic;
 using CallfireApiClient;
 using CallfireApiClient.Api.CallsTexts.Model;
+using CallfireApiClient.Api.Common.Model.Request;
+using CallfireApiClient.Api.Campaigns.Model;
 
 public class ApiClientSample
 {
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        var recipient1 = new CallRecipient
+
+        var request = new SendCallsRequest()
         {
-            ContactId = 463633187003,
-            LiveMessage = "testMessage",
-            TransferDigit = "1",
-            TransferMessage = "transferTestMessage",
-            TransferNumber = "14246525473"
+            DefaultVoice = Voice.MALE1,
+            Fields = "items(id,state,toNumber)",
+            CampaignId = 4050600003,
+            Recipients = new List<CallRecipient>
+            {
+                new CallRecipient
+                {
+                    PhoneNumber = "12135551100",
+                    LiveMessage = "Hello, Alice, this is message for live answer",
+                    MachineMessage = "Hello, Alice, this is message for answering machine"
+                },
+                new CallRecipient
+                {
+                    PhoneNumber = "12135551101",
+                    LiveMessage = "Hello, Bob, this is message for live answer",
+                    MachineMessage = "Hello, Bob, this is message for answering machine"
+                }
+            }
         };
-        var recipient2 = new CallRecipient
-        {
-            ContactId = 463633187003,
-            LiveMessage = "test Message2",
-            TransferDigit = "1",
-            TransferMessageSoundId = 1,
-            TransferNumber = "14246525473"
-        };
-        var recipients = new List<CallRecipient> {recipient1, recipient2};
-        IList<Call> calls = client.CallsApi.Send(recipients);
+       
+        IList<Call> calls = client.CallsApi.Send(request);
     }
 }

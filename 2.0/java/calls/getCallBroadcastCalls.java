@@ -7,8 +7,12 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
         FindBroadcastCallsRequest request = FindBroadcastCallsRequest.create()
-            .id(1234L)
-            .build();
+            .id(11646003L)
+            .batchId(5500030002L)
+            .offset(0L)
+            .limit(10L)
+            .fields("items(fromNumber,toNumber,state,modified)")
+        .build();
         Page<Call> calls = client.callBroadcastsApi().findCalls(request);
     }
 }

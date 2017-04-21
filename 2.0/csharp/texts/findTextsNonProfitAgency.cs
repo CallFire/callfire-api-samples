@@ -18,4 +18,3 @@ public class ApiClientSample
         Page<Text> texts = client.TextsApi.Find(request);
     }
 }
-

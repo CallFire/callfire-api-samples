@@ -9,26 +9,43 @@ public class ApiClientSample
     {
         var client = new CallfireClient("api_login", "api_password");
 
-        // this sample shows how add contacts to existing list from 3 different 
-        // sources: list of numbers, list of existing contact IDs, list of contact objects
-        var request1 = new AddContactListContactsRequest<string>
+        var request1 = new AddContactListContactsRequest<Contact>
         {
-            Contacts = new List<string> {"12135678881", "12135678882"},
-            ContactListId = 123456
+            Contacts = new List<Contact>
+            {
+                new Contact
+                {
+                    FirstName = "Alice",
+                    LastName = "Moore",
+                    HomePhone = "12135551126"
+                },
+                new Contact
+                {
+                    FirstName = "Bob",
+                    LastName = "Smith",
+                    HomePhone = "12135551127",
+                    Properties = new Dictionary<string, string>
+                    {
+                        {"age", "30"}
+                    }
+                }
+            },
+            ContactListId = 45006708003
         };
         client.ContactListsApi.AddListItems(request1);
 
-        var request2 = new AddContactListContactsRequest<long>
+        var request2 = new AddContactListContactsRequest<string>
         {
-            Contacts = new List<long> {123, 456, 789},
-            ContactListId = 123456
+            Contacts = new List<string> {"12132212384", "12136612355", "12133312300"},
+            ContactNumbersField = "workPhone",
+            ContactListId = 45006708003
         };
         client.ContactListsApi.AddListItems(request2);
 
-        var request3 = new AddContactListContactsRequest<Contact>
+        var request3 = new AddContactListContactsRequest<long>
         {
-            Contacts = new List<Contact> {new Contact {FirstName = "John", HomePhone = "16505044730"}},
-            ContactListId = 123456
+            Contacts = new List<long> {800634185003, 800734186003, 800834187003, 800984185003},
+            ContactListId = 45006708003
         };
         client.ContactListsApi.AddListItems(request3);
     }

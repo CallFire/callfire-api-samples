@@ -9,10 +9,11 @@ public class ApiClientSample
         var request = new AddBatchRequest
         {
             // your existing campaign id, you can get it via find() operation
-            CampaignId = 12340000003,
+            CampaignId = 11646003,
             Name = "Contacts Batch 1",
             // id of contact list that you have added on previous step
-            ContactListId = 300022200005
+            ContactListId = 300555001,
+            ScrubDuplicates = true
         };
         var id = client.CallBroadcastsApi.AddBatch(request);
     }

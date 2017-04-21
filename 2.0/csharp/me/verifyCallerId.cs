@@ -8,8 +8,8 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var request = new CallerIdVerificationRequest
         {
-            CallerId = "12132212384",
-            VerificationCode = "123"
+            CallerId = "12132000384",
+            VerificationCode = "1234"
         };
         bool? verified = client.MeApi.VerifyCallerId(request);
     }

@@ -1,8 +1,8 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->createTextBroadcast();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
@@ -42,8 +42,8 @@ class ApiClientSample{
                             }
                         }
                     ],
-                    "message":"Hello {u_name}, Missing for a great event ? We invite you to participate in a charity fair which takes place at first Saturday of November. You can order tickets by calling us: 855-555-5555. We are looking forward to meet you there"
-                }';
+                    "message":"Hello {u_name} ..."
+                 }';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());

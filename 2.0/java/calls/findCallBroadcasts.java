@@ -8,8 +8,12 @@ class ApiClientSample {
         CallfireClient client = new CallfireClient("api_login", "api_password");
         FindCallBroadcastsRequest request = FindCallBroadcastsRequest.create()
             // find all call broadcasts which name like 'campaign'
-            .name("campaign")
+            .name("broadcast name")
+            .label("my label")
+            .running(true)
+            .offset(0L)
             .limit(2L)
+            .fields("items(id,name,status,sounds)")
             .build();
         Page<CallBroadcast> broadcasts = client.callBroadcastsApi().find(request);
     }

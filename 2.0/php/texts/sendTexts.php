@@ -1,21 +1,31 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->sendTexts();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
+        $request->getOperationConfig()->setQueryParameters(array("campaignId" => 4050600003,
+                                                                 "defaultMessage" => "Hello!"));
         $body = '[
                     {
-                        "phoneNumber":"12135551100",
+                        "phoneNumber":"12135551122",
                         "message":"Hello World!"
                     },
                     {
-                        "phoneNumber":"12135551101",
-                        "message":"Testing 1 2 3"
+                        "contactId":122460000043
+                    },
+                    {
+                        "phoneNumber":"12135558090",
+                        "attributes":
+                        {
+                            "custom_external_id": 30005044,
+                            "custom_name": "Alice"
+                        },
+                        "message": "Hello, ${custom_name}!"
                     }
-                ]';
+                 ]';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());

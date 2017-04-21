@@ -1,11 +1,11 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->getCampaignSoundDataMp3();
-        $request->getOperationConfig()->setPathParameters(array("id" => 12345));
+        $request->getOperationConfig()->setPathParameters(array("id" => 379506003));
         $result = $client->request($request);
     }
 }

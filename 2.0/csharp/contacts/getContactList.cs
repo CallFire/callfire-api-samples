@@ -6,6 +6,6 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        ContactList contactList = client.ContactListsApi.Get(1026694003);
+        ContactList contactList = client.ContactListsApi.Get(379506003, "id,name,size,created");
     }
 }

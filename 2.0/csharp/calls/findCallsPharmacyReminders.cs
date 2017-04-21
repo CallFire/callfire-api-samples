@@ -14,8 +14,8 @@ public class ApiClientSample
         {
             CampaignId = 10,
             Label = "reminders",
-            IntervalBegin = new DateTime(2016, 12, 1, 0, 0, 0),
-            IntervalEnd = new DateTime(2016, 12, 10, 0, 0, 0),
+            IntervalBegin = new DateTime(2015, 11, 30, 22, 0, 0),
+            IntervalEnd = new DateTime(2016, 12, 09, 22, 0, 0),
             Limit = 10
         };
         Page<Call> calls = client.CallsApi.Find(request);

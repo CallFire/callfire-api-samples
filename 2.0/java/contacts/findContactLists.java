@@ -7,9 +7,10 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api login", "api password");
         FindContactListsRequest request = FindContactListsRequest.create()
-            .limit(1L)
-            .offset(1L)
-            .name("listName")
+            .name("my list")
+            .offset(0L)
+            .limit(10L)
+            .fields("items(id,name,size)")
             .build();
         Page<ContactList> contactLists = client.contactListsApi().find(request);
     }

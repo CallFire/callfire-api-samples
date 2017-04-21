@@ -1,8 +1,8 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->orderKeywords();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
@@ -11,7 +11,7 @@ class ApiClientSample{
                     [
                         "SUN", "MOON"
                     ]
-                }';
+                 }';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());

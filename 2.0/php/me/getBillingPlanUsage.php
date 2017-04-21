@@ -1,8 +1,8 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("account_login", "account_password");
         $request = $client->getBillingPlanUsage();
         $result = $client->request($request);

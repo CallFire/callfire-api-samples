@@ -1,11 +1,11 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->findWebhookResources();
-        $request->getOperationConfig()->setQueryParameters(array("fields" => "items(resource)"));
+        $request->getOperationConfig()->setQueryParameters(array("fields" => "items(events)"));
         $result = $client->request($request);
         $json = json_decode($result->getBody());
     }

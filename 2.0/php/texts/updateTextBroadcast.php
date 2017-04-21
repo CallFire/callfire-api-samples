@@ -1,16 +1,16 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->updateTextBroadcast();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
-        $request->getOperationConfig()->setPathParameters(array("id" => 123));
+        $request->getOperationConfig()->setPathParameters(array("id" => 11646003));
         $body = '{
-                    "name":"Example API SMS updated",
+                    "name":"Campaign name updated",
                     "message":"a new test message"
-                }';
+                 }';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());

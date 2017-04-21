@@ -9,9 +9,9 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var textAutoReply = new TextAutoReply()
         {
-            Number = "19206596476",
-            Message = "test message",
-            Match = "test match"
+            Number = "67076",
+            Message = "I am a leaf on the wind",
+            Keyword = "CALLFIRE"
         };
         ResourceId resourceId = client.TextAutoRepliesApi.Create(textAutoReply);
     }

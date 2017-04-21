@@ -1,6 +1,6 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
     public static function main() {
         $client =\CallFire\Api\DocumentedClient::createClient ("login", "password");

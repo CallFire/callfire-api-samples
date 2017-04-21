@@ -5,7 +5,7 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient callfireClient = new CallfireClient("account_login", "account_password");
         ApiCredentials credentials = new ApiCredentials();
-        credentials.setName("api user");
+        credentials.setName("api-integration");
         credentials = callfireClient.meApi().createApiCredentials(credentials);
     }
 }

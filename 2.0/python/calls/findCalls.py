@@ -22,7 +22,7 @@ response = client.calls.findCalls(
     # filter by call state
     states='READY,FINISHED,INVALID',
     # filter by call result
-    results='SENT',
+    results='LA',
     # filter only inbound actions
     inbound=False,
     # filter by time interval

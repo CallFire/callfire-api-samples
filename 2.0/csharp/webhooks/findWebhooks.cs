@@ -10,9 +10,14 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var request = new FindWebhooksRequest
         {
-            Limit = 5,
+            Name = "my webhook",
+            Resource = ResourceType.TEXT_BROADCAST,
+            Event = ResourceEvent.STARTED,
+            Callback = "https://myservice/callback",
             Enabled = true,
-            Name = "test_name"
+            Offset = 0,
+            Limit = 10,
+            Fields = "items(id,name,callback)"
         };
         Page<Webhook> webhooks = client.WebhooksApi.Find(request);
     }

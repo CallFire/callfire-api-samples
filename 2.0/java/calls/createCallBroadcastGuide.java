@@ -2,18 +2,16 @@ import com.callfire.api.client.CallfireClient;
 import com.callfire.api.client.api.campaigns.model.AnsweringMachineConfig;
 import com.callfire.api.client.api.campaigns.model.CallBroadcast;
 import com.callfire.api.client.api.campaigns.model.CallBroadcastSounds;
-import com.callfire.api.client.api.campaigns.model.DayOfWeek;
-import com.callfire.api.client.api.campaigns.model.LocalDate;
-import com.callfire.api.client.api.campaigns.model.LocalTime;
 import com.callfire.api.client.api.campaigns.model.LocalTimeRestriction;
-import com.callfire.api.client.api.campaigns.model.Recipient;
 import com.callfire.api.client.api.campaigns.model.RetryConfig;
 import com.callfire.api.client.api.campaigns.model.RetryConfig.RetryPhoneTypes;
 import com.callfire.api.client.api.campaigns.model.RetryConfig.RetryResults;
 import com.callfire.api.client.api.campaigns.model.Schedule;
-import com.callfire.api.client.api.campaigns.model.Voice;
+import com.callfire.api.client.api.common.model.LocalDate;
+import com.callfire.api.client.api.common.model.LocalTime;
 import com.callfire.api.client.api.common.model.ResourceId;
 
+import java.time.DayOfWeek;
 import java.util.Arrays;
 import java.util.HashSet;
 
@@ -22,7 +20,7 @@ class CreateVoiceBroadcastSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
         CallBroadcast broadcast = new CallBroadcast();
-        broadcast.setName("Voice Campaign");
+        broadcast.setName("Call Broadcast");
         // attach custom labels if needed
         broadcast.setLabels(Arrays.asList("voice tag", "id-10002"));
         // set validated Caller ID number. 
@@ -66,9 +64,8 @@ class CreateVoiceBroadcastSample {
         broadcast.setSchedules(Arrays.asList(schedule));
 
         // create broadcast with 'start' argument = true to start campaign immediately
-        ResourceId id = client.callBroadcastsApi().create(broadcast, false);
+        ResourceId id = client.callBroadcastsApi().create(broadcast);
 
         System.out.println(id);
     }
 }
-

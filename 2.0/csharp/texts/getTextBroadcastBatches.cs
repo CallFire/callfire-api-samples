@@ -8,8 +8,10 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var request = new GetByIdRequest
         {
-            Id = 123456,
-            Limit = 10
+            Id = 11646003,
+            Offset = 0,
+            Limit = 10,
+            Fields = "items(name,status,size,remaining)"
         };
         var batches = client.TextBroadcastsApi.GetBatches(request);
     }

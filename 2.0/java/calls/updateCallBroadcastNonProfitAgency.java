@@ -4,7 +4,10 @@ import com.callfire.api.client.api.campaigns.model.DayOfWeek;
 import com.callfire.api.client.api.campaigns.model.LocalDate;
 import com.callfire.api.client.api.campaigns.model.LocalTime;
 import com.callfire.api.client.api.campaigns.model.Schedule;
+import com.callfire.api.client.api.common.model.LocalDate;
+import com.callfire.api.client.api.common.model.LocalTime;
 
+import java.time.DayOfWeek;
 import java.util.Arrays;
 import java.util.HashSet;
 
@@ -19,7 +22,7 @@ class ApiClientSample {
         CallBroadcast broadcast = new CallBroadcast();
         // set id of an existing broadcast, you can use find() method to search
         //  for particular broadcast id
-        broadcast.setId(10030003L);
+        broadcast.setId(11646003L);
         // schedule a campaign to run on Saturday and Sunday between 2016-12-01 10:00:00
         //  and 2016-12-10 18:00:00
         Schedule schedule1 = new Schedule();
@@ -42,8 +45,6 @@ class ApiClientSample {
 
         // update broadcast
         client.callBroadcastsApi().update(broadcast);
-        // if it's in 'Stopped' state you need to start it to apply the schedule
-        // client.callBroadcastsApi().start(broadcast.getId());
     }
 }
 

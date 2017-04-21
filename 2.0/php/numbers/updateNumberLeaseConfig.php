@@ -1,12 +1,12 @@
 <?php
 
-class ApiClientSample{
+class ApiClientSample {
 
-    public static function main(){
+    public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->updateNumberLeaseConfig();
         $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
-        $request->getOperationConfig()->setPathParameters(array("number" => "16502572135"));
+        $request->getOperationConfig()->setPathParameters(array("number" => "19206596476"));
         $body = '{
                     "configType":"TRACKING",
                     "callTrackingConfig":
@@ -54,7 +54,7 @@ class ApiClientSample{
                             "category":"Sales"
                         }
                     }
-                }';
+                 }';
         $request->getOperationConfig()->setBodyParameter($body);
         $result = $client->request($request);
         $json = json_decode($result->getBody());

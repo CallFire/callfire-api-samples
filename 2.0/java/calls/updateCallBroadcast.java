@@ -1,26 +1,20 @@
 
 import com.callfire.api.client.CallfireClient;
+import com.callfire.api.client.api.campaigns.model.AnsweringMachineConfig;
 import com.callfire.api.client.api.campaigns.model.CallBroadcast;
-import com.callfire.api.client.api.campaigns.model.DayOfWeek;
-import com.callfire.api.client.api.campaigns.model.LocalDate;
-import com.callfire.api.client.api.campaigns.model.LocalTime;
-import com.callfire.api.client.api.campaigns.model.LocalTimeRestriction;
+import com.callfire.api.client.api.campaigns.model.CallBroadcastSounds;
 import com.callfire.api.client.api.campaigns.model.Schedule;
+import com.callfire.api.client.api.common.model.LocalDate;
+import com.callfire.api.client.api.common.model.LocalTime;
 
+import java.time.DayOfWeek;
 import java.util.Arrays;
 import java.util.HashSet;
 
 class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api_login", "api_password");
-        CallBroadcast broadcast = client.callBroadcastsApi().get(123L);
-        // time restrictions
-        LocalTimeRestriction restrictions = new LocalTimeRestriction();
-        restrictions.setBeginHour(10);
-        restrictions.setBeginMinute(10);
-        restrictions.setEndHour(22);
-        restrictions.setEndMinute(0);
-        restrictions.setEnabled(true);
+        CallBroadcast broadcast = new CallBroadcast();
 
         // add schedule to a campaign to run on Saturday and Sunday between 2016-12-01 10:00:00
         //  and 2016-12-10 18:00:00
@@ -33,8 +27,15 @@ class ApiClientSample {
         // set optional time zone, if leave empty account's timezone will be used
         schedule.setTimeZone("America/New_York");
 
-        broadcast.setLocalTimeRestriction(restrictions);
         broadcast.getSchedules().add(schedule);
+
+        broadcast.setId(11646003L);
+        broadcast.setName("Call Broadcast with Schedules");
+        broadcast.setAnsweringMachineConfig(AnsweringMachineConfig.LIVE_IMMEDIATE);
+        CallBroadcastSounds sounds = new CallBroadcastSounds();
+        sounds.setLiveSoundText("Hello! This is an updated Call Broadcast config tts");
+        broadcast.setSounds(sounds);
+
         // update campaign
         client.callBroadcastsApi().update(broadcast);
     }

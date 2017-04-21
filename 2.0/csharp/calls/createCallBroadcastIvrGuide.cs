@@ -10,11 +10,11 @@ public class ApiClientSample
         var client = new CallfireClient("api_login", "api_password");
         var broadcast = new CallBroadcast
         {
-            Name = "IVR Campaign",
+            Name = "Call Broadcast",
             // set validated Caller ID number.
             FromNumber = "12135551189",
             // attach custom labels if needed
-            Labels = new List<string> {"ivr tag", "id-10002"},
+            Labels = new List<string> { "ivr tag", "id-10002" },
             // allow CallFire to dial recipient only between 09:00 - 18:00 depending on
             //  recipient's number area code timezone
             LocalTimeRestriction = new LocalTimeRestriction
@@ -43,7 +43,7 @@ public class ApiClientSample
             {
                 MaxAttempts = 2,
                 MinutesBetweenAttempts = 5,
-                RetryResults = new List<RetryResults> {RetryResults.BUSY, RetryResults.NO_ANS},
+                RetryResults = new List<RetryResults> { RetryResults.BUSY, RetryResults.NO_ANS },
                 RetryPhoneTypes = new List<RetryPhoneTypes>
                 {
                     RetryPhoneTypes.MOBILE_PHONE,
@@ -82,7 +82,6 @@ public class ApiClientSample
         };
 
         // create broadcast with 'start' argument = true to start campaign immediately
-        var id = client.CallBroadcastsApi.Create(broadcast, false);
+        var id = client.CallBroadcastsApi.Create(broadcast);
     }
 }
-

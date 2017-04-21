@@ -5,9 +5,9 @@ class ApiClientSample {
     public static void main(String[] args) {
         CallfireClient client = new CallfireClient("api login", "api password");
         UpdateContactListRequest request = UpdateContactListRequest.create()
-            .id(1026694003L)
-            .name("sampleListName").
-                build();
+            .id(11646003L)
+            .name("contact list updated")
+            .build();
         client.contactListsApi().update(request);
     }
 }

@@ -5,7 +5,6 @@ const client = new CallfireClient('api-login', 'api-password');
 
 client.ready(() => {
     client.contacts.addDoNotContacts({
-      id: 45006708003,
       body: {
         source: 'My DNC list 1',
         call: true,

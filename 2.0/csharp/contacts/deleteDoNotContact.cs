@@ -5,6 +5,6 @@ public class ApiClientSample
     public static void Main(string[] args)
     {
         var client = new CallfireClient("api_login", "api_password");
-        client.DncApi.Delete("12135551188");
+        client.DncApi.Delete("12135551126,12136666123");
     }
 }

@@ -12,31 +12,17 @@ public class ApiClientSample
         {
             Name = "Charity Campaign",
             // set validated Caller ID number.
-            FromNumber = "12135551189",
+            FromNumber = "19206596476",
             // attach custom labels if needed
-            Labels = new List<string> {"charity", "id-10002"},
-            // allow CallFire to send out a message to recipient only between 09:00 - 18:00 depending on
-            //  recipient's number area code timezone
-            LocalTimeRestriction = new LocalTimeRestriction
-            {
-                BeginHour = 9,
-                BeginMinute = 0,
-                EndHour = 18,
-                EndMinute = 0
-            },
-
+            Labels = new List<string> {"charity", "id-10003"},
             // set message text
-            Message = @"
-                Hello ${u_name}. Missing for a great event ?
-                We invite you to participate in a charity fair which takes place at first Saturday of November. You can order
-                tickets by calling us: 855-555-5555. We are looking forward to meet you there
-            ",
+            Message = @"Hello {u_name} ...",
             // add new recipients
             Recipients = new List<TextRecipient>
             {
                 new TextRecipient
                 {
-                    PhoneNumber = "12135551100",
+                    PhoneNumber = "13233834422",
                     // set custom recipient attributes, they are available only to a single Call/Text
                     //  action, do not confuse them with contact fields which are stored with contact
                     //  and are available to each Call/Text where contact is attached to
@@ -48,15 +34,16 @@ public class ApiClientSample
                 },
                 new TextRecipient
                 {
-                    PhoneNumber = "12135551101",
+                    PhoneNumber = "13233834433",
                     Attributes = new Dictionary<string, string>
                     {
-                        {"u_name", "Mark"}
+                        {"u_name", "Mark"},
+                        {"age", "45"}
                     }
                 },
                 new TextRecipient
                 {
-                    PhoneNumber = "12135551101",
+                    PhoneNumber = "13233834488",
                     // you can override a message set in broadcast for a particular recipient
                     Message = "Hi ${u_name}, the megic number is ${magic_number}",
                     Attributes = new Dictionary<string, string>

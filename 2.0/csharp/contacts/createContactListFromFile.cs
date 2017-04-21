@@ -8,7 +8,7 @@ public class ApiClientSample
     {
         var client = new CallfireClient("api_login", "api_password");
 
-        var path = "Resources/File-examples/contacts1.csv";
-        ResourceId listId = client.ContactListsApi.CreateFromCsv("fileList", Path.GetFullPath(path));
+        var path = "/contacts.csv";
+        ResourceId listId = client.ContactListsApi.CreateFromCsv("My Contact List", Path.GetFullPath(path));
     }
 }

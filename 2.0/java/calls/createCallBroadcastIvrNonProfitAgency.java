@@ -1,16 +1,16 @@
 import com.callfire.api.client.CallfireClient;
 import com.callfire.api.client.api.campaigns.model.CallBroadcast;
-import com.callfire.api.client.api.campaigns.model.DayOfWeek;
-import com.callfire.api.client.api.campaigns.model.LocalDate;
-import com.callfire.api.client.api.campaigns.model.LocalTime;
 import com.callfire.api.client.api.campaigns.model.LocalTimeRestriction;
 import com.callfire.api.client.api.campaigns.model.Recipient;
 import com.callfire.api.client.api.campaigns.model.RetryConfig;
 import com.callfire.api.client.api.campaigns.model.RetryConfig.RetryPhoneTypes;
 import com.callfire.api.client.api.campaigns.model.RetryConfig.RetryResults;
 import com.callfire.api.client.api.campaigns.model.Schedule;
+import com.callfire.api.client.api.common.model.LocalDate;
+import com.callfire.api.client.api.common.model.LocalTime;
 import com.callfire.api.client.api.common.model.ResourceId;
 
+import java.time.DayOfWeek;
 import java.util.Arrays;
 import java.util.HashSet;
 
@@ -65,7 +65,7 @@ class CreateVoiceBroadcastSample {
         recipient1.getAttributes().put("position", "Manager");
 
         Recipient recipient2 = new Recipient();
-        recipient2.setPhoneNumber("12135551101");
+        recipient2.setPhoneNumber("12135771188");
         recipient2.getAttributes().put("external_system_id", "34347770001");
         recipient2.getAttributes().put("call_label", "friends");
 
