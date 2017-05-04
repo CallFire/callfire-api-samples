@@ -5,7 +5,6 @@ class ApiClientSample {
     public static function main() {
         $client =\CallFire\Api\DocumentedClient::createClient ("login", "password");
         $request = $client -> createWebhook();
-        $request -> getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
         $body = '{
                     "name":"Sms sent",
                     "resource":"OutboundText",

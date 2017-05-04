@@ -5,7 +5,6 @@ class ApiClientSample {
     public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request1 = $client->createContactList();
-        $request1->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
         $body = '{
                     "name":"My Contact List",
                     "contacts":
@@ -30,7 +29,6 @@ class ApiClientSample {
         $json = json_decode($result1->getBody());
 
         $request2 = $client->createContactList();
-        $request2->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
         $body = '{
                     "name":"My Contact List",
                     "contactIds": [
@@ -44,7 +42,6 @@ class ApiClientSample {
         $result2 = $client->request($request2);
 
         $request3 = $client->createContactList();
-        $request3->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
         $body = '{
                     "name":"My Contact List",
                     "contactNumbers": [

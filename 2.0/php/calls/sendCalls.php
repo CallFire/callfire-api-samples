@@ -5,7 +5,6 @@ class ApiClientSample {
     public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->sendCalls();
-        $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
         $request->getOperationConfig()->setQueryParameters(array("campaignId" => 4050600003,
                                                                  "fields" => "items(id,state,toNumber)",
                                                                  "defaultVoice" => "MALE1"));

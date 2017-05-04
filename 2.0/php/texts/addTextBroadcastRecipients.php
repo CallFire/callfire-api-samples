@@ -5,7 +5,6 @@ class ApiClientSample {
     public static function main() {
         $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
         $request = $client->addTextBroadcastRecipients();
-        $request->getOperationConfig()->setHeaderParameters(array("Content-Type" => "application/json"));
         $request->getOperationConfig()->setPathParameters(array("id" => 11646003));
         $body = '[
                     {
