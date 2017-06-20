@@ -1,0 +1,21 @@
+{
+   "timestamp":1496758301032,
+   "webhookId":3745004,
+   "webhookName":"testContactListValidationFinish",
+   "resourceType":"ContactList",
+   "events":[
+      {
+         "timestamp":1496758301032,
+         "webhookId":3745004,
+         "resourceType":"ContactList",
+         "eventType":"ValidationFinished",
+         "resource":{
+            "id":10,
+            "name":"API Contact List 2017-06-06 07:11:24",
+            "size":2,
+            "created":1496758285000,
+            "status":"ACTIVE"
+         }
+      }
+   ]
+}
