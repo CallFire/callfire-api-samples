@@ -3,7 +3,7 @@
 class ApiClientSample {
 
     public static function main() {
-        $client = \CallFire\Api\DocumentedClient::createClient("login", "password");
+        $client = \CallFire\Api\DocumentedClient::createClient("api_login", "api_password");
         $request = $client->getAccount();
         $result = $client->request($request);
         $json = json_decode($result->getBody());
