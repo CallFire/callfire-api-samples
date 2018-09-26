@@ -1,0 +1,15 @@
+{
+  "items":[
+    {
+      "id":150003,
+      "name":"image1",
+      "created":1537878116000,
+      "lengthInBytes":55744,
+      "mediaType":"image/jpeg",
+      "publicUrl":"https://api.callfire.com/v2/media/public/5a6.jpeg"
+    }
+  ],
+  "limit":100,
+  "offset":0,
+  "totalCount":1
+}

@@ -10,7 +10,7 @@ class ApiClientSample {
             .filter("name")
             .includeArchived(true)
             .includePending(true)
-            .includePending(true)
+            .includeScrubbed(true)
             .offset(0L)
             .limit(10L)
             .fields("items(id,name,callback)")
