@@ -1,0 +1,24 @@
+{
+   "timestamp": 1502221022807,
+   "webhookId": 1,
+   "webhookName": "ASA DLR Test",
+   "resourceType": "OutboundTextDeliveryReport",
+   "events": [
+      {
+         "timestamp": 1502221022807,
+         "webhookId": 1,
+         "resourceType": "OutboundTextDeliveryReport",
+         "eventType": "Received",
+         "resource": {
+            "id": 7420017300281076000,
+            "actionId": 123123123123,
+            "campaignId": 123456789,
+            "toNumber": "12135551234",
+            "fromNumber": "12138888888",
+            "timestamp": 1502221022571,
+            "deliveryState": "DELIVERED",
+            "deliveryCategory": "DELIVERED"
+         }
+      }
+   ]
+}
